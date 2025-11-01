@@ -1,4 +1,10 @@
+import TabsSection from "@/components/Home-UI/TabSection";
 import HeroSection from "../components/Home-UI/Home";
+import ShowroomBanner from "@/components/Home-UI/ShowBanner";
+import { collectionItems } from "@/data/collection";
+import CollectionSlider from "@/components/Home-UI/collectionslider";
+import Accessories from "@/components/Home-UI/Accessories";
+import BannerSection from "@/components/Home-UI/Accessories";
 export default function Home() {
   return (
     <>
@@ -32,6 +38,23 @@ export default function Home() {
         sofa
         id="target-section"
       />
+      <TabsSection />
+      
+       <CollectionSlider items={collectionItems} />
+       <BannerSection
+        title="Aesthetics Accessories"
+        description="Curated luxury accessories that make a statement with elegance and style."
+        imageUrl="/assets/images/home/accessories.webp"
+        link="/shop"
+        buttonText="Shop Now"
+    />
+     <ShowroomBanner
+        videoSrc="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
+        poster="/images/showroom-poster.png"
+        height="h-[600px]"
+        title="The Showroom With Visit Us"
+      />
+      
     </>
   );
 }
