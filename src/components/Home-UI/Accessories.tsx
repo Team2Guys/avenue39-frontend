@@ -23,7 +23,7 @@ const BannerSection: React.FC<BannerSectionProps> = ({
 }) => {
   return (
     <section
-      className={`flex flex-col ${
+      className={`flex flex-col bg-black text-white ${
         reverse ? "sm:flex-row-reverse" : "sm:flex-row"
       } p-6 sm:p-10 gap-5 items-center`}
     >

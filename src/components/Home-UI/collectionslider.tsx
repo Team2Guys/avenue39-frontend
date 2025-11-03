@@ -1,133 +1,180 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperClass } from "swiper";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Link from "next/link";
 import Image from "next/image";
 import { HiOutlineShoppingCart } from "react-icons/hi";
-import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
-export interface CollectionItem {
+interface Product {
   id: number;
   title: string;
-  imageUrl: string;
-  link: string;
+  category: string;
   price: string;
-  color?: string;
+  image: string;
+  colors: string[];
 }
 
-interface CollectionSliderProps {
-  items: CollectionItem[];
-}
-const CollectionSlider: React.FC<CollectionSliderProps> = ({ items }) => {
-  const swiperRef = useRef<SwiperClass | null>(null);
+const products: Product[] = [
+  {
+    id: 1,
+    title: "Sapori Dining Table (61x30 cm)",
+    category: "Our Full Collection",
+    price: "Dhs. 4,500",
+    image: "/images/p1.jpg",
+    colors: ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"],
+  },
+  {
+    id: 2,
+    title: "Siberian Living Room Set",
+    category: "Our Full Collection",
+    price: "Dhs. 3,400",
+    image: "/images/p2.jpg",
+    colors: ["/images/c1.jpg", "/images/c2.jpg"],
+  },
+  {
+    id: 3,
+    title: "Siberian Living Room Set",
+    category: "Our Full Collection",
+    price: "Dhs. 3,400",
+    image: "/images/p3.jpg",
+    colors: ["/images/c1.jpg", "/images/c3.jpg"],
+  },
+  {
+    id: 4,
+    title: "Siberian Living Room Set",
+    category: "Our Full Collection",
+    price: "Dhs. 3,400",
+    image: "/images/p4.jpg",
+    colors: ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"],
+  },
+   {
+    id: 4,
+    title: "Siberian Living Room Set",
+    category: "Our Full Collection",
+    price: "Dhs. 3,400",
+    image: "/images/p4.jpg",
+    colors: ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"],
+  },
+   {
+    id: 4,
+    title: "Siberian Living Room Set",
+    category: "Our Full Collection",
+    price: "Dhs. 3,400",
+    image: "/images/p4.jpg",
+    colors: ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"],
+  },
+  
+];
+
+const BestSelling: React.FC = () => {
+  const prevRef = useRef<HTMLDivElement>(null);
+  const nextRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // wait for refs to be available before Swiper init
+  }, []);
 
   return (
-    <section className="py-10 bg-gray-50">
-      <div className="px-4 sm:px-0">
-        {/* Section Header */}
-        <div className="text-center mb-6">
-          <h2 className="text-2xl sm:text-3xl md:text-[48px] text-gray-900 font-extralight">
-            Best Selling
-          </h2>
-        </div>
+    <section className="bg-[#f2f0ed] py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-center text-3xl tracking-[4px] mb-10 font-light uppercase">
+          Best Selling
+        </h2>
 
-        {/* Swiper Slider */}
-        <div className="relative">
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={15}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            breakpoints={{
-              480: { slidesPerView: 1.2 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 4 },
-            }}
-          >
-            {items.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition duration-300 group relative rounded-md">
-                  <div className="block pb-7">
-                    {/* Adjust image height for mobile */}
-                    <div className="relative h-[320px] sm:h-[400px] md:h-[478px] w-full overflow-hidden">
-                      <Link href={item.link}>
-                        <Image
-                          src={item.imageUrl}
-                          alt={item.title}
-                          fill
-                          className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                        />
-                      </Link>
-                    </div>
-
-                    {/* Product Info */}
-                    <div className="p-3 flex flex-col gap-2">
-                      <div className="flex justify-between items-center">
-                        <h3 className="text-xs sm:text-sm md:text-[12px] font-alethia">
-                          {item.title}
-                        </h3>
-                        {item.color && (
-                          <div className="h-5 w-5 rounded-full border border-gray-200 overflow-hidden">
-                            {/* If color is an image URL */}
-                            {item.color.endsWith(".jpg") ||
-                            item.color.endsWith(".png") ? (
-                              <Image
-                                src={item.color}
-                                alt="color"
-                                width={20}
-                                height={20}
-                                className="object-cover"
-                              />
-                            ) : (
-                              <div
-                                className="w-4 h-4 rounded-full"
-                                style={{ backgroundColor: item.color }}
-                              ></div>
-                            )}
-                          </div>
-                        )}
-                      </div>
-
-                      <Link
-                        className="font-alethia font-light text-gray-400 text-xs sm:text-sm"
-                        href="/collection"
-                      >
-                        Our Full Collection
-                      </Link>
-                      <p className="text-sm sm:text-base font-medium">{item.price}</p>
-
-                      {/* Add to Cart Button */}
-                      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="bg-black text-white py-2 w-full flex justify-center items-center gap-2 text-xs sm:text-sm cursor-pointer">
-                          <HiOutlineShoppingCart />
-                          Add to Cart - {item.price}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination-dots",
+            renderBullet: (_, className) =>
+              `<span class="${className} w-2 h-2 rounded-full bg-gray-400 inline-block"></span>`,
+          }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onSwiper={(swiper) => {
+            // Fix navigation refs after mount
+            // @ts-ignore
+            swiper.params.navigation.prevEl = prevRef.current;
+            // @ts-ignore
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
+        >
+          {products.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="bg-white rounded-md shadow-sm hover:shadow-md transition-all">
+                <div className="relative w-full h-[350px]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover rounded-t-md"
+                  />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
 
-          {/* Navigation Arrows (hidden on mobile) */}
+                <div className="p-4">
+                  <h3 className="text-[15px] font-medium">{item.title}</h3>
+                  <p className="text-sm text-gray-500">{item.category}</p>
+
+                  <div className="flex items-center gap-2 mt-2">
+                    {item.colors.map((color, index) => (
+                      <Image
+                        key={index}
+                        src={color}
+                        alt="Color"
+                        width={18}
+                        height={18}
+                        className="rounded-full border"
+                      />
+                    ))}
+                  </div>
+
+                  <p className="text-[15px] font-semibold mt-2">
+                    {item.price}
+                  </p>
+
+                  <button className="w-full mt-4 bg-black text-white flex items-center justify-center gap-2 py-2 text-sm hover:bg-gray-900 transition-all">
+                    <HiOutlineShoppingCart className="text-lg" />
+                    Add to cart – {item.price}
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Pagination container with arrows */}
+        <div className="flex justify-center items-center gap-6 mt-10 border border-gray-300 py-2 rounded-full w-fit mx-auto px-6">
+          {/* Left Arrow */}
           <div
-            className="hidden md:flex absolute top-1/2 -translate-y-1/2 left-0 z-10 cursor-pointer p-2"
-            onClick={() => swiperRef.current?.slidePrev()}
+            ref={prevRef}
+            className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
           >
-            <GoArrowLeft size={24} />
+            ←
           </div>
+
+          {/* Pagination Dots */}
+          <div className="custom-pagination-dots flex justify-center items-center gap-2"></div>
+
+          {/* Right Arrow */}
           <div
-            className="hidden md:flex absolute top-1/2 -translate-y-1/2 right-0 z-10 cursor-pointer p-2"
-            onClick={() => swiperRef.current?.slideNext()}
+            ref={nextRef}
+            className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
           >
-            <GoArrowRight size={24} />
+            →
           </div>
         </div>
       </div>
@@ -135,4 +182,4 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ items }) => {
   );
 };
 
-export default CollectionSlider;
+export default BestSelling;

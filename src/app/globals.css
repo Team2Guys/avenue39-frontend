@@ -30,3 +30,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-alethia);
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+  transform: scale(1.3);
+}

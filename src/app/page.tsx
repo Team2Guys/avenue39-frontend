@@ -1,10 +1,10 @@
 import TabsSection from "@/components/Home-UI/TabSection";
 import HeroSection from "../components/Home-UI/Home";
 import ShowroomBanner from "@/components/Home-UI/ShowBanner";
-import { collectionItems } from "@/data/collection";
-import CollectionSlider from "@/components/Home-UI/collectionslider";
-import Accessories from "@/components/Home-UI/Accessories";
+import { hotspots } from "@/data/collection";
 import BannerSection from "@/components/Home-UI/Accessories";
+import ProductHotspot from "@/components/Home-UI/ProductHotSpot";
+import BestSelling from "@/components/Home-UI/collectionslider";
 export default function Home() {
   return (
     <>
@@ -40,7 +40,7 @@ export default function Home() {
       />
       <TabsSection />
       
-       <CollectionSlider items={collectionItems} />
+       <BestSelling />
        <BannerSection
         title="Aesthetics Accessories"
         description="Curated luxury accessories that make a statement with elegance and style."
@@ -54,6 +54,12 @@ export default function Home() {
         height="h-[600px]"
         title="The Showroom With Visit Us"
       />
+      <main className="flex justify-center items-center min-h-screen bg-gray-100">
+        <ProductHotspot
+          imageSrc="/assets/images/home/hotspot.webp"
+          hotspots={hotspots}
+        />
+    </main>
       
     </>
   );
