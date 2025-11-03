@@ -1,23 +1,10 @@
 "use client";
-
+import { hotSpots } from "@/data/collection";
+import { ProductHotspotProps } from "@/types/home.type";
 import Image from "next/image";
 import React, { useState } from "react";
 
-interface Hotspot {
-  id: number;
-  top: string;
-  left: string;
-  name: string;
-  price: string;
-  variations?: string[];
-}
-
-interface ProductHotspotProps {
-  imageSrc: string;
-  hotspots: Hotspot[];
-}
-
-const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc, hotspots }) => {
+export const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc }) => {
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
 
   const toggleHotspot = (id: number) => {
@@ -36,7 +23,7 @@ const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc, hotspots }) =
       />
 
       {/* Hotspots */}
-      {hotspots.map((spot) => (
+      {hotSpots.map((spot) => (
         <div
           key={spot.id}
           className="absolute"
@@ -52,9 +39,9 @@ const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc, hotspots }) =
 
           {/* Tooltip */}
           {activeHotspot === spot.id && (
-            <div className="absolute left-8 top-1/2 -translate-y-1/2 bg-white text-gray-800 shadow-lg rounded-md p-3 min-w-[160px] z-10 border border-gray-200">
-              <h4 className="font-semibold text-sm md:text-base">{spot.name}</h4>
-              <p className="text-sm text-gray-500">{spot.price}</p>
+            <div className="absolute left-8 top-1/2 -translate-y-1/2 bg-white text-gray-800 shadow-lg p-3 min-w-40 z-10 border border-gray-200">
+              <h4 className="font-extralight text-xs md:text-sm">{spot.name}</h4>
+              
               {spot.variations && (
                 <ul className="mt-1 text-xs text-gray-400 list-disc list-inside">
                   {spot.variations.map((v, i) => (
@@ -62,6 +49,7 @@ const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc, hotspots }) =
                   ))}
                 </ul>
               )}
+              <p className="text-sm font-extralight font-alethia">DHS <span className="text-black font-light">{spot.price}</span></p>
             </div>
           )}
         </div>
@@ -69,5 +57,3 @@ const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc, hotspots }) =
     </div>
   );
 };
-
-export default ProductHotspot;

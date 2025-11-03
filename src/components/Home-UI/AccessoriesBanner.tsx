@@ -1,19 +1,10 @@
 "use client";
-
+import { AccessoriesBannerProps } from "@/types/home.type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface BannerSectionProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  buttonText?: string;
-  reverse?: boolean; // optional: for image on left side
-}
-
-const BannerSection: React.FC<BannerSectionProps> = ({
+export const AccessoriesBanner: React.FC< AccessoriesBannerProps> = ({
   title,
   description,
   imageUrl,
@@ -56,5 +47,3 @@ const BannerSection: React.FC<BannerSectionProps> = ({
     </section>
   );
 };
-
-export default BannerSection;

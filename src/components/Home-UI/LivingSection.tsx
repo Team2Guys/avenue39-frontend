@@ -1,40 +1,30 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useState, useEffect } from "react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import ProductCard from "./ProductCard";
-import { roomsData } from "@/data/roomsData";
-
-const TabsSection = () => {
-  const tabs = Object.keys(roomsData) as (keyof typeof roomsData)[];
-  const [activeTab, setActiveTab] = useState<keyof typeof roomsData>("LIVING");
+import { rooms } from "@/data/rooms";
+export const LivingSection = () => {
+  const tabs = Object.keys(rooms) as (keyof typeof rooms)[];
+  const [activeTab, setActiveTab] = useState<keyof typeof rooms>("LIVING");
 
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const paginationRef = useRef<HTMLDivElement>(null);
 
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
 
   // Re-init navigation after Swiper is ready
-  useEffect(() => {
-    if (
-      swiperInstance &&
-      prevRef.current &&
-      nextRef.current &&
-      paginationRef.current
-    ) {
-      swiperInstance.params.navigation.prevEl = prevRef.current;
-      swiperInstance.params.navigation.nextEl = nextRef.current;
-      swiperInstance.params.pagination.el = paginationRef.current;
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
-      swiperInstance.pagination.init();
-      swiperInstance.pagination.update();
-    }
-  }, [swiperInstance, activeTab]);
+ useEffect(() => {
+  if (swiperInstance) {
+    swiperInstance.navigation?.update();
+    swiperInstance.pagination?.update();
+  }
+}, [swiperInstance, activeTab]);
 
   return (
     <section
@@ -42,8 +32,8 @@ const TabsSection = () => {
       style={{ backgroundImage: "url('/assets/images/home/categories.webp')" }}
     >
       {/* Header + Tabs */}
-      <div className="container mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-8">
-        <h2 className="text-3xl sm:text-4xl font-light tracking-widest text-black font-alethia text-center md:text-left">
+      <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-extralight tracking-widest text-black font-alethia text-center md:text-left">
           {activeTab} ROOM
         </h2>
 
@@ -65,10 +55,9 @@ const TabsSection = () => {
       </div>
 
       {/* Swiper Slider */}
-      <div className="relative container mx-auto px-4">
+      <div className="relative">
         <Swiper
           modules={[Pagination, Navigation]}
-          onSwiper={setSwiperInstance}
           spaceBetween={20}
           breakpoints={{
             320: { slidesPerView: 1 },
@@ -77,17 +66,42 @@ const TabsSection = () => {
           }}
           pagination={{
             clickable: true,
-            el: paginationRef.current,
             renderBullet: (_, className) =>
               `<span class="${className} w-2.5 h-2.5 rounded-full inline-block bg-gray-400 opacity-70 mx-1 transition-all duration-300"></span>`,
           }}
           navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
+            // refs will be set in onSwiper below
           }}
-          className="pb-14"
+       onSwiper={(swiper) => {
+  setSwiperInstance(swiper);
+
+  if (
+    prevRef.current &&
+    nextRef.current &&
+    paginationRef.current &&
+    swiper.params.navigation &&
+    swiper.params.pagination
+  ) {
+    // 👇 Narrow the types safely
+    if (typeof swiper.params.navigation === 'object') {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+    }
+
+    if (typeof swiper.params.pagination === 'object') {
+      swiper.params.pagination.el = paginationRef.current;
+    }
+
+    swiper.navigation.init();
+    swiper.navigation.update();
+    swiper.pagination.init();
+    swiper.pagination.render();
+    swiper.pagination.update();
+  }
+}}
+
         >
-          {roomsData[activeTab].map((item) => (
+          {rooms[activeTab].map((item) => (
             <SwiperSlide key={item.id}>
               <ProductCard item={item} />
             </SwiperSlide>
@@ -97,32 +111,30 @@ const TabsSection = () => {
 
       {/* Pagination bar BELOW the background section */}
       <div className="relative mt-8 flex justify-center">
-        <div className="flex items-center gap-6 border border-gray-300 px-6 py-3 rounded-full bg-white/80 backdrop-blur-sm shadow-sm">
+        <div className="flex items-center gap-6">
           {/* Left Arrow */}
           <div
             ref={prevRef}
             className="cursor-pointer text-xl text-gray-700 hover:text-black transition-all select-none"
           >
-            ←
+           <GoArrowLeft className="w-8 h-8" />
           </div>
 
           {/* Dots */}
           <div
             ref={paginationRef}
-            className="custom-pagination-dots flex justify-center items-center gap-2"
+            className="flex justify-center items-center gap-2 cursor-pointer"
           ></div>
 
           {/* Right Arrow */}
           <div
             ref={nextRef}
-            className="cursor-pointer text-xl text-gray-700 hover:text-black transition-all select-none"
+            className="cursor-pointer text-xl transition-all text-gray-700 hover:text-black select-none"
           >
-            →
+           <GoArrowRight className="w-8 h-8" />
           </div>
         </div>
       </div>
     </section>
   );
 };
-
-export default TabsSection;

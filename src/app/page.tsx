@@ -1,10 +1,7 @@
-import TabsSection from "@/components/Home-UI/TabSection";
-import HeroSection from "../components/Home-UI/Home";
-import ShowroomBanner from "@/components/Home-UI/ShowBanner";
-import { hotspots } from "@/data/collection";
-import BannerSection from "@/components/Home-UI/Accessories";
-import ProductHotspot from "@/components/Home-UI/ProductHotSpot";
-import BestSelling from "@/components/Home-UI/collectionslider";
+
+import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ProductHotspot, ShowroomBanner } from "@/components/home-ui";
+import { hotSpots } from "@/data/collection";
+
 export default function Home() {
   return (
     <>
@@ -38,10 +35,9 @@ export default function Home() {
         sofa
         id="target-section"
       />
-      <TabsSection />
-      
+      <LivingSection />
        <BestSelling />
-       <BannerSection
+       <AccessoriesBanner
         title="Aesthetics Accessories"
         description="Curated luxury accessories that make a statement with elegance and style."
         imageUrl="/assets/images/home/accessories.webp"
@@ -51,14 +47,14 @@ export default function Home() {
      <ShowroomBanner
         videoSrc="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
         poster="/images/showroom-poster.png"
-        height="h-[600px]"
+        height="h-[300px] md:h-[500px] xl:h-[810px]"
         title="The Showroom With Visit Us"
       />
       <main className="flex justify-center items-center min-h-screen bg-gray-100">
-        <ProductHotspot
+        {/* <ProductHotspot
           imageSrc="/assets/images/home/hotspot.webp"
-          hotspots={hotspots}
-        />
+          hotSpots={hotSpots}
+        /> */}
     </main>
       
     </>

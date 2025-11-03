@@ -1,14 +1,4 @@
-export interface Product {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  buttonText?: string;
-  link?: string;
-  icon?: string; 
-}
-
-export const roomsData = {
+export const rooms = {
   LIVING: [
     {
       id: 1,
@@ -82,7 +72,7 @@ export const roomsData = {
       id: 2,
       title: "Wooden Dining Table Set",
       description: "Premium wood table with matching chairs for cozy meals.",
-      image: "/assets/images/home/dining-table.webp",
+      image: "/assets/images/home/garona.webp",
       buttonText: "Shop Now",
       link: "/shop",
     },
@@ -94,7 +84,7 @@ export const roomsData = {
       title: "Aurora Bed Frame",
       description:
         "Modern bed frame with soft-touch upholstery and durable build.",
-      image: "/assets/images/home/bedroom1.webp",
+      image: "/assets/images/home/munich.webp",
       buttonText: "Shop Now",
       link: "/shop",
     },
@@ -105,7 +95,7 @@ export const roomsData = {
       id: 1,
       title: "Ergonomic Office Chair",
       description: "Perfect comfort for long working hours.",
-      image: "/assets/images/home/office-chair.webp",
+      image: "/assets/images/home/munich.webp",
       buttonText: "Shop Now",
       link: "/shop",
     },

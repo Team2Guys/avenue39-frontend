@@ -1,15 +1,9 @@
 "use client";
 
+import { VideoSectionProps } from "@/types/home.type";
 import React, { useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
-
-interface VideoSectionProps {
-    videoSrc: string;
-    posterSrc?: string;
-    className?: string;
-}
-
-const VideoSection: React.FC<VideoSectionProps> = ({
+export const VideoSection: React.FC<VideoSectionProps> = ({
     videoSrc,
     posterSrc,
     className = "",
@@ -52,5 +46,3 @@ const VideoSection: React.FC<VideoSectionProps> = ({
         </div>
     );
 };
-
-export default VideoSection;

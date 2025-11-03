@@ -2,61 +2,74 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/data/roomsData";
-import * as FaIcons from "react-icons/fa6"; // import all FA icons
-import { PiShoppingCartLight } from "react-icons/pi"; // ✅ imported cart icon
+import * as FaIcons from "react-icons/fa6";
+import { PiShoppingCartLight } from "react-icons/pi";
 
 interface ProductCardProps {
   item: Product;
 }
 
+export interface Product {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  buttonText?: string;
+  link?: string;
+  icon?: string; 
+}
 const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
-  // Dynamically pick icon from data (optional)
   const IconComponent = item.icon
     ? (FaIcons as Record<string, React.ElementType>)[item.icon]
     : null;
 
-  // Check if it's a "Shop Now" button
   const isShopNow = item.buttonText?.toLowerCase().includes("shop");
 
   return (
-    <div className="relative bg-black/70 text-white overflow-hidden group shadow-lg">
-      {/* Product Image */}
-      <Image
-        src={item.image}
-        alt={item.title}
-        width={400}
-        height={500}
-        className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
-      />
+    <Link
+      href={item.link ?? "/shop"}
+      className="relative bg-black/70 text-white overflow-hidden group shadow-lg cursor-pointer"
+    >
 
-      {/* Overlay content */}
-      <div className="absolute bottom-0 left-0 w-full p-5 from-black/80 via-black/50 to-transparent">
-        {/* Icon + Title */}
+      <div className="relative h-[400px] lg:h-[609px]">
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
+      </div>
+
+ 
+      <div className="absolute bottom-0 left-0 w-full p-5">
+     
         <div className="flex items-center gap-2 mb-2">
           {IconComponent && <IconComponent className="text-lg text-white" />}
-          <h3 className="text-lg font-semibold">{item.title}</h3>
+          <h3 className="text-[20px] font-normal font-alethia">{item.title}</h3>
         </div>
 
-        <p className="text-sm mb-3 text-gray-200 xl:w-[50%]">{item.description}</p>
+        <p className="text-sm mb-3 xl:w-[50%] font-alethia font-extralight">
+          {item.description}
+        </p>
 
-        {/* Button (visible only on hover) */}
         {item.buttonText && (
           <Link
             href={item.link ?? "#"}
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium shadow-[0_4px_10px_rgba(0,0,0,0.4)] transition-all duration-300 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 ${
-              isShopNow
-                ? "bg-white text-black hover:bg-gray-100"
-                : "border border-white text-white hover:bg-white hover:text-black"
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium shadow-[0_4px_10px_rgba(0,0,0,0.4)] transition-all duration-300 
+            opacity-100 translate-y-0 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0
+            ${isShopNow
+              ? "bg-white text-black hover:bg-gray-100"
+              : "border border-white text-white hover:bg-white hover:text-black"
             }`}
           >
-            {/* ✅ Show cart icon only for Shop Now */}
             {isShopNow && <PiShoppingCartLight size={18} />}
             {item.buttonText}
           </Link>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 

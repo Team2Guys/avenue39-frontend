@@ -1,4 +1,4 @@
-export const InformationData = [
+export const informationData = [
     {
         title: "Having been established in the UAE for over a decade, the time was right to have a division solely focussed on sourcing and buying the best pieces of unique, modern furniture for your home. The owners are passionate about furnishings and every item selected is something worthy of their own homes. Our buyers spend time hand testing each and every product."
     },

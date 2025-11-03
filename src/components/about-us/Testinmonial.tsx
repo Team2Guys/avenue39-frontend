@@ -46,7 +46,7 @@ const testimonials = [
   },
 ];
 
-const Testimonial = () => {
+export const Testimonial = () => {
   return (
     <div className="p-2 md:p-6 mt-10 mb-10 space-y-10">
       <div className="max-w-3xl mx-auto text-center space-y-2">
@@ -110,5 +110,3 @@ const Testimonial = () => {
     </div>
   );
 };
-
-export default Testimonial;
