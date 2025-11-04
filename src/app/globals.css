@@ -21,13 +21,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #FFFF;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
   font-family: var(--font-alethia);
 }
 
@@ -35,3 +35,4 @@ body {
   background-color: #000 !important;
   transform: scale(1.3);
 }
+

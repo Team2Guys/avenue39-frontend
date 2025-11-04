@@ -1,15 +1,14 @@
 
 
-import HeroSection from '@/components/about-us/HeroBanner'
-import Information from '@/components/about-us/Information'
-import Testimonial from '@/components/about-us/Testinmonial'
-import VideoSection from '@/components/common/VideoSection'
+
+import { HeroBanner, Information, Testimonial } from '@/components/about-us'
+import{ HomeVideo } from '@/components/common/HomeVideo'
 const AboutPage = () => {
   return (
     <>
-      <HeroSection />
+      <HeroBanner />
       <Information />
-      <VideoSection videoSrc='https://bncmain.s3.eu-north-1.amazonaws.com/Motion+Blinds+%26+Curtains+No+Voiceover.mp4' />
+      <HomeVideo videoSrc='https://bncmain.s3.eu-north-1.amazonaws.com/Motion+Blinds+%26+Curtains+No+Voiceover.mp4' />
       <Testimonial />
     </>
   )

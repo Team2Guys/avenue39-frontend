@@ -3,7 +3,7 @@
 import { VideoSectionProps } from "@/types/home.type";
 import React, { useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
-export const VideoSection: React.FC<VideoSectionProps> = ({
+export const HomeVideo: React.FC<VideoSectionProps> = ({
     videoSrc,
     posterSrc,
     className = "",

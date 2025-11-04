@@ -70,3 +70,9 @@ export interface VideoSectionProps {
     posterSrc?: string;
     className?: string;
 }
+
+// categories
+export interface Props {
+  categories: string[];
+}
+
