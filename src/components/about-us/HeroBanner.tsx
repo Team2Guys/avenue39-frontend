@@ -5,7 +5,7 @@ export const HeroBanner = () => {
     <section className="relative w-full h-[250px] md:h-[350px] lg:h-[570px]">
       <div className="absolute inset-0">
         <Image
-          src="/assets/images/About/hero-banner.webp"
+          src="/assets/images/about-us/hero-banner.webp"
           alt="Modern interior living room"
           className="w-full h-full object-cover"
           fill

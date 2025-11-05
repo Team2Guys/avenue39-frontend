@@ -65,7 +65,9 @@ export interface ShowroomBannerProps {
   height?: string; 
   title?: string;
 }
-export interface VideoSectionProps {
+
+//home video props
+export interface HomeVideoProps {
     videoSrc: string;
     posterSrc?: string;
     className?: string;
@@ -76,3 +78,39 @@ export interface Props {
   categories: string[];
 }
 
+export interface VideoSectionProps {
+  videoUrl: string;
+  title: string;
+  description: string;
+  height?: string; 
+}
+
+// contact-banner props
+export interface BannerSectionProps {
+  imageSrc: string; 
+  title?: string;
+  height?: string; 
+  textColor?: string; 
+  overlay?: boolean; 
+  overlayColor?: string; 
+  overlayOpacity?: number; 
+}
+
+export interface ContactFormProps {
+  onSuccess?: () => void;
+  questionFlag?: boolean;
+}
+
+// breadcrumb
+ export interface BreadcrumbProps  {
+    title?: string;
+    image?: string;
+    slug?: string;
+    subcategory?: string;
+    altText?:string
+    isImagetext?: boolean;
+    imageClass?:string
+    showTitle?:boolean
+    careersName?: string;
+    
+  };

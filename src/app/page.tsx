@@ -1,10 +1,11 @@
 
-import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ProductHotspot, ShowroomBanner } from "@/components/home-ui";
-import { hotSpots } from "@/data/collection";
+import Breadcrumb from "@/components/common/Breadcrumb";
+import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components/home-ui";
 
 export default function Home() {
   return (
     <>
+      <Breadcrumb/>
       <HeroSection
         backgroundImage="/assets/images/home/herobanner.webp"
         title="Endless Luxury"
@@ -50,13 +51,13 @@ export default function Home() {
         height="h-[300px] md:h-[500px] xl:h-[810px]"
         title="The Showroom With Visit Us"
       />
-      <main className="flex justify-center items-center min-h-screen bg-gray-100">
-        {/* <ProductHotspot
+      {/* <main className="flex justify-center items-center min-h-screen bg-gray-100">
+        <ProductHotspot
           imageSrc="/assets/images/home/hotspot.webp"
           hotSpots={hotSpots}
-        /> */}
+        />
     </main>
-      
+       */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 
-import { informationData } from "@/data"
+import { informationData } from "@/data/about"
 import Image from "next/image"
 
 export const Information = () => {

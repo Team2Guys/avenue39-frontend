@@ -18,7 +18,7 @@ export interface Product {
   link?: string;
   icon?: string; 
 }
-const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
+export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
   const IconComponent = item.icon
     ? (FaIcons as Record<string, React.ElementType>)[item.icon]
     : null;
@@ -73,4 +73,3 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
   );
 };
 
-export default ProductCard;

@@ -1,9 +1,9 @@
 "use client";
 
-import { VideoSectionProps } from "@/types/home.type";
+import { HomeVideoProps} from "@/types/home.type";
 import React, { useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
-export const HomeVideo: React.FC<VideoSectionProps> = ({
+export const HomeVideo: React.FC<HomeVideoProps> = ({
     videoSrc,
     posterSrc,
     className = "",

@@ -1,6 +1,6 @@
 "use client";
 
-export default function FiltersSidebar() {
+export const FiltersSidebar = () => {
   return (
     <aside className="hidden lg:block w-64 border-l border-gray-200 p-4">
       <h3 className="font-semibold text-gray-800 mb-4">Filters</h3>

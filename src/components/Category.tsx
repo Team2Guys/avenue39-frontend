@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-
 import { productsData } from "@/data/product";
 import { CategoryTabs } from "./CategoryTabs";
 import { ProductCard } from "./ProductCard";
+
 
 export const CategoryPage = () => {
   const categories = [
@@ -40,7 +40,7 @@ export const CategoryPage = () => {
   };
 
   return (
-    <div className="px-2 lg:px-4">
+    <div className="px-2 lg:px-4 sm:mt-10">
         <div className="text-center font-alethia my-5 lg:my-7 uppercase text-[19px]">Dinning</div>
       {/* Category Tabs */}
       <CategoryTabs

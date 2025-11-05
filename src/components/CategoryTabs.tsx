@@ -4,6 +4,7 @@ import { Props } from "@/types/home.type";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
+
 export const CategoryTabs = ({ categories }: Props) => {
   const pathname = usePathname();
   // Create clean slug from category

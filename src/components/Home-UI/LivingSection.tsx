@@ -6,8 +6,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import ProductCard from "./ProductCard";
+
 import { rooms } from "@/data/rooms";
+import { HomeProductCard } from "./HomeProductCard";
 export const LivingSection = () => {
   const tabs = Object.keys(rooms) as (keyof typeof rooms)[];
   const [activeTab, setActiveTab] = useState<keyof typeof rooms>("LIVING");
@@ -103,7 +104,7 @@ export const LivingSection = () => {
         >
           {rooms[activeTab].map((item) => (
             <SwiperSlide key={item.id}>
-              <ProductCard item={item} />
+              <HomeProductCard item={item} />
             </SwiperSlide>
           ))}
         </Swiper>
