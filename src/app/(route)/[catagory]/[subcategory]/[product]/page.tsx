@@ -1,11 +1,11 @@
-import Breadcrumb from '@/components/common/Breadcrumb'
-import React from 'react'
+import Breadcrumb from '@/components/Common/Breadcrumb'
+import ProductDetail from '@/components/product/ProductDetail'
 
 const Product = () => {
   return (
     <>
     <Breadcrumb slug="Category" subcategory="subcategory"  title="product"/>
-    <div>Product</div>
+    <ProductDetail />
     </>
   )
 }

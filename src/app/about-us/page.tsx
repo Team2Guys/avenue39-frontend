@@ -1,7 +1,7 @@
 
 import { HeroBanner, Information, Testimonial } from '@/components/about-us'
-import Breadcrumb from '@/components/common/Breadcrumb'
-import{ HomeVideo } from '@/components/common/HomeVideo'
+import Breadcrumb from '@/components/Common/Breadcrumb'
+import{ HomeVideo } from '@/components/Common/HomeVideo'
 const AboutPage = () => {
   return (
     <>

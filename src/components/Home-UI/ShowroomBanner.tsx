@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import Pause from "../svgs/pause";
+import Pause from "../Svgs/pause";
 import { ShowroomBannerProps } from "@/types/home.type";
 export const ShowroomBanner: React.FC<ShowroomBannerProps> = ({
   videoSrc,

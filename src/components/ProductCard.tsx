@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Product } from "@/data/product";
 import Image from "next/image";
 import Link from "next/link";
-import Dollar from "./svgs/dollar";
+import Dollar from "./Svgs/dollar";
 import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 
 interface Props{
