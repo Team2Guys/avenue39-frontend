@@ -3,7 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroSectionProps } from "@/types/home.type";
-import DropDown from "../Svgs/dropdown";
+import DropDown from "../svgs/dropdown";
+
 
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
