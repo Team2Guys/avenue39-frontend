@@ -32,12 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header/>
       <body
-        className={`${alethiaNext.variable} ${signatie.variable} antialiased`}
+      className={`${alethiaNext.variable} ${signatie.variable} antialiased`}
       >
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

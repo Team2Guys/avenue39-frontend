@@ -143,3 +143,24 @@ body {
   }
 }
 
+
+/* Custom scrollbar styling */
+.table-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.table-scrollbar::-webkit-scrollbar-track {
+  background: #D0D0D0;
+  border-radius: 0px;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 0px;
+  border: 0px solid white;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: black;
+}

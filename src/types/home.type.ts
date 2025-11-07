@@ -114,3 +114,24 @@ export interface ContactFormProps {
     careersName?: string;
     
   };
+    
+  // button
+  export interface LinkButtonProps {
+    href?: string;
+    text: string;
+    className?: string;
+    type?: "button" | "submit" | "reset";
+    onClick?: () => void;
+  }
+  
+// ordersummary
+  export interface OrderSummaryProps {
+  items: OrderItem[];
+}
+  export interface OrderItem {
+  id: number;
+  name: string;
+  size: string;
+  price: number;
+  image: string;
+}
