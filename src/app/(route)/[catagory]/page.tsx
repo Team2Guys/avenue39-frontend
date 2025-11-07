@@ -1,6 +1,7 @@
 import { CategoryPage } from "@/components/Category";
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import { VideoSection } from "@/components/Common/VideoSection";
+import { VideoSection } from "@/components/common";
+import Breadcrumb from "@/components/common/Breadcrumb";
+
 
 const Category = () => {
   return (

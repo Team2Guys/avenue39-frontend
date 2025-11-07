@@ -11,9 +11,8 @@ export const Thank = () => {
      <Button
       href="/shop"
       text="Continue Shopping"
-      className="bg-black text-white py-2 px-5 w-fit xl:w-[18%] text-center text-[14px] lg:text-[16px] rounded-md hover:bg-gray-800 transition-all duration-300"
+      className="bg-black text-white w-[30%] lg:w-[18%] text-[14px] lg:text-[16px]"
       />
-
     </div>
   )
 }

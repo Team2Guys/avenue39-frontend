@@ -1,11 +1,11 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components/Home-UI";
 
+import BreadCrumb from "@/components/common/Breadcrumb";
+import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components/home-ui";
 
 export default function Home() {
   return (
     <>
-      <Breadcrumb />
+      <BreadCrumb />
       <HeroSection
         backgroundImage="/assets/images/home/herobanner.webp"
         title="Endless Luxury"

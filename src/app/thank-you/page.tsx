@@ -1,9 +1,10 @@
 import Breadcrumb from "@/components/common/Breadcrumb"
 import { VideoSection } from "@/components/common/VideoSection"
 import { OrderSummary } from "@/components/OrderSummary"
-
+import RelatedProducts from "@/components/RelatedProducts"
 import { Thank } from "@/components/Thank"
 import { sampleItems } from "@/data/order"
+import { products } from "@/data/relatedproduct"
 
 const Thankyou = () => {
   return (
@@ -11,6 +12,7 @@ const Thankyou = () => {
     <Breadcrumb title='Thank You'/>
     <Thank/>
     <OrderSummary items={sampleItems} />
+    <RelatedProducts products={products} />;
     <VideoSection
     videoUrl="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
     title="Lorem Ipsum is simply dummy text"

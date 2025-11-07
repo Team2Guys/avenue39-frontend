@@ -12,7 +12,7 @@ const Button: React.FC<LinkButtonProps> = ({
 }) => {
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link href={href} className={`text-center p-2 rounded-md ${className}`}>
         {text}
       </Link>
     );

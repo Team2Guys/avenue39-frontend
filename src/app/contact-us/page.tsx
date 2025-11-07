@@ -1,6 +1,6 @@
 import { Banner } from '@/components/Banner'
 import Call from '@/components/ContactInfo'
-import Breadcrumb from '@/components/Common/Breadcrumb'
+import Breadcrumb from '@/components/common/Breadcrumb'
 import { VideoSection } from '@/components/Common/VideoSection'
 
 const ContactUs = () => {

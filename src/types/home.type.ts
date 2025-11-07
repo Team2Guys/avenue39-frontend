@@ -135,3 +135,18 @@ export interface ContactFormProps {
   price: number;
   image: string;
 }
+
+// Related products
+export interface ProductItem {
+  id: number;
+  title: string;
+  price: string;
+  regularPrice: string;
+  image: string;
+}
+
+export interface RelatedProductsProps {
+  title?: string;
+  subtitle?: string;
+  products: ProductItem[];
+}
