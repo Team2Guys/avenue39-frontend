@@ -14,3 +14,23 @@ export interface ProductImage {
   imageIndex?: number;
   Index?: string;
 }
+
+export interface ITabbyList {
+  id: number;
+  para: string;
+}
+export interface ITabbyPayList {
+  id: number;
+  imageUrl: StaticImageData;
+}
+
+export interface ITamaraList {
+  id: number;
+  title?: string;
+  para: string;
+}
+
+export interface PaymentMethodProps {
+  showheading?: boolean
+  installments: number
+}
