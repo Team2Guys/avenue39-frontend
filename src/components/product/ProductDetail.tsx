@@ -3,6 +3,7 @@ import PaymentMethod from "../ui/payment"
 import Thumbnail from "./thumbnail"
 import { MdOutlineInfo } from "react-icons/md"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion"
+import Dollar from "../Svgs/dollar"
 
 const productData = {
     name: "Sapori DinAing Table (d:130 cm)",
@@ -44,9 +45,9 @@ const ProductDetail = () => {
                 <div className="w-fit">
                     <h1 className="font-alethia font-semibold text-[32px]">{productData.name}</h1>
                     <div className="space-y-1 my-4">
-                        <p className="font-alethia font-bold text-2xl flex items-center gap-1"><Image src="/assets/images/price_sign/d.svg" width={30} height={30} alt='currency' />{productData.regularPrice} Regular</p>
+                        <p className="font-alethia font-bold text-2xl flex items-center gap-1"><Dollar className="w-6 h-6" />{productData.regularPrice} Regular</p>
                         <div className="flex justify-between gap-2 items-center">
-                            <p className="font-alethia font-bold text-2xl flex items-center gap-1"><Image src="/assets/images/price_sign/d.svg" width={30} height={30} alt='currency' />{productData.memberPrice} Member</p>
+                            <p className="font-alethia font-bold text-2xl flex items-center gap-1"><Dollar className="w-6 h-6" />{productData.memberPrice} Member</p>
                             <p className="text-[13px] font-alethia font-normal flex items-center gap-2"><span>Save £149 for £100 per year</span> <MdOutlineInfo /></p>
                         </div>
                     </div>

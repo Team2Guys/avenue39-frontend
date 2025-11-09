@@ -12,7 +12,7 @@
 }
 
 :root {
-  --primary: oklch(0.208 0.042 265.755);
+   --primary: oklch(0.208 0.042 265.755);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-light: #F9F7F4;
   --breadcrumb: #E2E2E2;
@@ -51,7 +51,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
+   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-secondary-light: var(--secondary-light);
   --color-breadcrumb: var(--breadcrumb);
@@ -140,6 +140,7 @@ body {
     @apply border-border outline-ring/50;
   }
 
+
   body {
     @apply bg-background text-foreground;
   }
@@ -159,4 +160,25 @@ body {
 
 .mainThmbnailSwiper .swiper-pagination {
   bottom: 30px !important;
+}
+
+/* Custom scrollbar styling */
+.table-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.table-scrollbar::-webkit-scrollbar-track {
+  background: #D0D0D0;
+  border-radius: 0px;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 0px;
+  border: 0px solid white;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: black;
 }

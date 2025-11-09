@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,8 +26,7 @@ export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
   const isShopNow = item.buttonText?.toLowerCase().includes("shop");
 
   return (
-    <Link
-      href={item.link ?? "/shop"}
+    <div
       className="relative bg-black/70 text-white overflow-hidden group shadow-lg cursor-pointer"
     >
 
@@ -69,7 +68,7 @@ export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
           </Link>
         )}
       </div>
-    </Link>
+    </div>
   );
 };
 

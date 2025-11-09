@@ -6,6 +6,7 @@ import { HeroSectionProps } from "@/types/home.type";
 import DropDown from "../Svgs/dropdown";
 
 
+
 export const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage,
   title,

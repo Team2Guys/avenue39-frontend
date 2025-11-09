@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import Pause from "../Svgs/pause";
 import { ShowroomBannerProps } from "@/types/home.type";
+import { Pause } from "lucide-react";
 export const ShowroomBanner: React.FC<ShowroomBannerProps> = ({
   videoSrc,
   poster,

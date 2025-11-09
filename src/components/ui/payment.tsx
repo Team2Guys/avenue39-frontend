@@ -8,6 +8,7 @@ import { PaymentMethodProps } from "@/types/product";
 import Modal from "./Modal";
 import { tabbyfeature, tabbyhowitwork, tabbypayicon, tamarafeature, tamaralist, tamarawhy } from "@/data/produuct-detail";
 import { formatAED } from "@/utils/helperFunctions";
+import Dollar from "../Svgs/dollar";
 
 const PaymentMethod = ({showheading,installments}:PaymentMethodProps) => {
   const [tabbyOpen, setTabbyOpen] = useState(false);
@@ -49,7 +50,7 @@ const PaymentMethod = ({showheading,installments}:PaymentMethodProps) => {
                   key={index}
                   className="text-black font-medium 2xl:font-semibold pb-1 text-center "
                 >
-                  <p className="text-xs font-bold font-alethia text-nowrap flex gap-1"><Image src="/assets/images/price_sign/d.svg" width={13} height={13} alt='currency' />{formatAED(installments)}</p>
+                  <p className="text-xs font-bold font-alethia text-nowrap flex gap-1 items-center"><Dollar className="w-3 h-3" />{formatAED(installments)}</p>
                   <p className="text-[8px] xl:text-[8px] 2xl:text-10 text-[#8D8D8D]">{label}</p>
                 </div>
               ))}
@@ -75,7 +76,7 @@ const PaymentMethod = ({showheading,installments}:PaymentMethodProps) => {
                   key={index}
                   className="text-black font-medium 2xl:font-semibold pb-1 text-center "
                 >
-                  <p className="text-xs font-bold font-alethia text-nowrap flex gap-1"><Image src="/assets/images/price_sign/d.svg" width={13} height={13} alt='currency' />{formatAED(installments)}</p>
+                  <p className="text-xs font-bold font-alethia text-nowrap flex gap-1 items-center"><Dollar className="w-3 h-3" />{formatAED(installments)}</p>
                   <p className="text-[8px] xl:text-[8px] 2xl:text-10 text-[#8D8D8D]">{label}</p>
                 </div>
               ))}
