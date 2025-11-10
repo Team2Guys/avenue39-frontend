@@ -34,7 +34,7 @@ export const CategoryTabs = ({ categories }: Props) => {
                 className={`relative font-extralight text-[16px] font-alethia transition-all duration-200 px-4 py-2
                   ${
                     isActive
-                      ? "text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-black"
+                      ? "text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[0.5px] after:bg-black"
                       : "text-gray-600 border border-gray-300 rounded-full hover:bg-gray-100"
                   }
                 `}

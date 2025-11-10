@@ -16,6 +16,17 @@ const alethiaNext = localFont({
   display: "swap",
 });
 
+const alethiaExtraLight = localFont({
+  src: [
+    {
+      path: "../../public/assets/font/alethianext-extralight.otf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-alethia-extralight",
+  display: "swap",
+});
+
 const signatie = localFont({
   src: "../../public/assets/font/Signatie.woff2",
   variable: "--font-signatie",
@@ -33,9 +44,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header />
       <body
-      className={`${alethiaNext.variable} ${signatie.variable} antialiased`}
+      className={`${alethiaNext.variable} ${signatie.variable} ${alethiaExtraLight.variable} antialiased`}
       >
         {children}
         <Footer />

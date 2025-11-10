@@ -56,6 +56,7 @@
   --color-secondary-light: var(--secondary-light);
   --color-breadcrumb: var(--breadcrumb);
   --font-alethia: "AlethiaNext", serif;
+  --font-alethiaLight: "alethiaExtraLight", serif;
   --font-signatie: "Signatie", cursive;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -181,4 +182,12 @@ body {
 
 .table-scrollbar::-webkit-scrollbar-thumb:hover {
   background: black;
+}
+
+.matchProduct-slider .swiper-pagination {
+  bottom: auto !important;
+  top: 0px !important;
+  right: 0px !important;
+  left: auto !important;
+  width: fit-content !important;
 }
