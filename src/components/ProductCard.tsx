@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Product } from "@/data/product";
 import Image from "next/image";
 import Link from "next/link";
-import Dollar from "./Svgs/dollar";
 import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
+import Dollar from "./svgs/dollar";
 
 interface Props{
 product: Product; 
@@ -28,7 +28,7 @@ export const ProductCard = ({ product }: Props) => {
   };
 
   return (
-    <div className="bg-[#FAFAFA] rounded-xl relative transition-all p-3 shadow-md hover:shadow-lg">
+    <div className="bg-[#FAFAFA] rounded-xl relative transition-all p-3 hover:shadow-lg">
       <button
         onClick={handleWishlistToggle}
         className="absolute right-7 top-7 z-30 bg-white/30 rounded-md p-1 cursor-pointer"
@@ -41,7 +41,7 @@ export const ProductCard = ({ product }: Props) => {
       </button>
 
       {/* Product Image */}
-      <div className="relative w-full aspect-3/4 h-[408px] z-10">
+      <div className="relative w-full aspect-4/4 h-[408px] z-10">
         <Image
           src={product.image}
           alt={product.title}

@@ -1,5 +1,6 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components/Home-UI";
+
+import Breadcrumb from "@/components/common/Breadcrumb";
+import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components/home-ui";
 
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
         buttonLabel="Shop Now"
         buttonLink="/shop"
         className="h-[50vh]"
+        sofa
+       
       />
       <HeroSection
         backgroundImage="/assets/images/home/interiorbanner.webp"
@@ -33,7 +36,7 @@ export default function Home() {
         buttonLink="/shop"
         hidebutton
         className="flex text-start items-start justify-start"
-        sofa
+        elevate
         id="target-section"
       />
       <LivingSection />

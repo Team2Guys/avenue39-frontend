@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import CustomSwiper from "./CustomSwiper";
-import Button from "./Common/Button";
-import Dollar from "./Svgs/dollar";
+import Button from "./common/CommonButton";
+import Dollar from "./svgs/dollar";
 import { RelatedProductsProps } from "@/types/home.type";
 
 const RelatedProducts: React.FC<RelatedProductsProps> = ({
@@ -38,11 +38,27 @@ const RelatedProducts: React.FC<RelatedProductsProps> = ({
               <h3 className="text-[16px] font-alethia">
                 {item.title}
               </h3>
-              <div className="flex items-center gap-2 text-[10px] text-[#272727] mt-2 font-alethia">
+              <div className="flex justify-between gap-2 text-[10px] text-[#272727] mt-2 font-alethia">
+                <div className="flex justify-items items-center gap-1">
                 <span className="flex justify-center items-center gap-1"><Dollar className="h-3 w-3"/>{item.price} Regular</span>
                 <span className="line-through text-gray-400 flex justify-center items-center gap-1">
                  <Dollar className="h-3 w-3"/>{item.regularPrice} Regular
                 </span>
+               </div>
+              <div className="flex gap-2 mt-2">
+              {item.colorimages?.map((color, i) => (
+                <div key={i} className="w-3 h-3 rounded-full overflow-hidden">
+                  <Image
+                    src={color || "/placeholder.png"}
+                    alt={`Color ${i + 1}`}
+                    width={12}
+                    height={12}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              ))}
+            </div>
+
               </div>
               <div className="mt-4 flex justify-center items-center">
                 <Button

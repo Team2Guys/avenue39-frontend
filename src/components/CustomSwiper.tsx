@@ -1,12 +1,13 @@
 "use client";
 
 import React, { ReactNode, useEffect, useRef } from "react";
-import { Swiper, SwiperSlide, SwiperClass } from "swiper/react"; // ✅ SwiperClass added
+import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import Leftarrow from "./svgs/leftarrow";
+import Rightarrow from "./svgs/rightarrow";
 
 interface CustomSwiperProps<T> {
   items: T[];
@@ -76,7 +77,7 @@ const CustomSwiper = <T,>({
           ref={prevRef}
           className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
         >
-          <GoArrowLeft className="w-8 h-8" />
+          <Leftarrow  className="w-5 h-5" />
         </div>
 
         <div className="custom-pagination-dots flex justify-center items-center gap-2"></div>
@@ -85,7 +86,7 @@ const CustomSwiper = <T,>({
           ref={nextRef}
           className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
         >
-          <GoArrowRight className="w-8 h-8" />
+          <Rightarrow className="w-5 h-5" />
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 // Home/Herosection
 export interface HeroSectionProps {
   backgroundImage: string;
@@ -11,6 +13,7 @@ export interface HeroSectionProps {
   hidebutton?: boolean;
   sofa?: boolean;
   id?:string
+  elevate?:boolean;
 }
 
 export interface Product {
@@ -143,10 +146,12 @@ export interface ProductItem {
   price: string;
   regularPrice: string;
   image: string;
+ colorimages?: string[];
 }
 
 export interface RelatedProductsProps {
   title?: string;
   subtitle?: string;
   products: ProductItem[];
+ 
 }

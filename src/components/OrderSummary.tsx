@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Dollar from "./Svgs/dollar";
+import Dollar from "./svgs/dollar";
 import {OrderSummaryProps } from "@/types/home.type";
 
 export const OrderSummary: React.FC<OrderSummaryProps> = ({ items }) => {

@@ -3,9 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroSectionProps } from "@/types/home.type";
-import DropDown from "../Svgs/dropdown";
-
-
+import DropDown from "../svgs/dropdown";
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage,
@@ -18,6 +16,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   interior = false,
   hidebutton = false,
   sofa = false,
+  elevate= false,
   id
 }) => {
   const handleScroll = () => {
@@ -39,10 +38,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         className="object-cover absolute inset-0 z-0"
       />
 
-      <div className={`relative z-20 text-center w-[280px] sm:w-2xl ${sofa ? "text-start flex flex-col justify-center items-start max-w-2xl my-4 sm:h-[84vh]":""} ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl" : ""} px-4 p-5`}>
+      <div className={`relative z-20 text-center w-[280px] sm:w-2xl ${elevate ? "text-start flex flex-col justify-center items-start max-w-2xl my-4 sm:h-[84vh]":""} ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl" : ""} px-4 p-5`}>
         
        <div className={`absolute inset-0 ${interior ? "bg-white/10 border border-white/20 rounded-xl" : "bg-black/70"} -z-10`}></div>
-       <div className="container mx-auto">
+        <div className="lg:ml-20">
         <h2 className={`text-3xl text-gray-300 lg:text-[33px] tracking-wide ${interior ? "font-light" : "uppercase font-extralight"} font-alethia`}>
           {title}
         </h2>
@@ -52,8 +51,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </h3>
         )}
         {highlightText && (
-          <p className={`text-xl mt-3 text-gray-300 ${interior || sofa ? "font-alethia" : "font-signatie italic"} text-[36px]`}>{highlightText}</p>
-
+          <p className={`text-xl mt-3 text-gray-300 ${interior ? "font-alethia text-[32px]" : sofa ? "font-signatie italic text-[44px] font-extralight":""} ${elevate? "text-[23px] font-extralight": ""}`}>{highlightText}</p>
         )}
 
         {buttonLabel && buttonLink && (
@@ -65,8 +63,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </Link>
         )}
         </div>
-      </div>
-
+        </div>
       <div className={`${hidebutton? "hidden": ""} cursor-pointer absolute bottom-5 sm:bottom-28 z-20`}  onClick={handleScroll}>
        <DropDown  />
       </div>

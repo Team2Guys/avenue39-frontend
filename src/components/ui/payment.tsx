@@ -8,7 +8,7 @@ import { PaymentMethodProps } from "@/types/product";
 import Modal from "./Modal";
 import { tabbyfeature, tabbyhowitwork, tabbypayicon, tamarafeature, tamaralist, tamarawhy } from "@/data/produuct-detail";
 import { formatAED } from "@/utils/helperFunctions";
-import Dollar from "../Svgs/dollar";
+import Dollar from "../svgs/dollar";
 
 const PaymentMethod = ({showheading,installments}:PaymentMethodProps) => {
   const [tabbyOpen, setTabbyOpen] = useState(false);

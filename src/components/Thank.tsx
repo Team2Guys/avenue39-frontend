@@ -1,5 +1,5 @@
-import Thankyou from "./Svgs/thankyou"
-import Button from "./Common/Button"
+import Thankyou from "./svgs/thankyou"
+import Button from "./common/CommonButton"
 
 export const Thank = () => {
   return (

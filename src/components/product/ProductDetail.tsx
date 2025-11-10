@@ -3,7 +3,7 @@ import PaymentMethod from "../ui/payment"
 import Thumbnail from "./thumbnail"
 import { MdOutlineInfo } from "react-icons/md"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion"
-import Dollar from "../Svgs/dollar"
+import Dollar from "../svgs/dollar"
 
 const productData = {
     name: "Sapori DinAing Table (d:130 cm)",

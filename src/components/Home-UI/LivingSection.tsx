@@ -9,6 +9,7 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 import { rooms } from "@/data/rooms";
 import { HomeProductCard } from "./HomeProductCard";
+
 export const LivingSection = () => {
   const tabs = Object.keys(rooms) as (keyof typeof rooms)[];
   const [activeTab, setActiveTab] = useState<keyof typeof rooms>("LIVING");
@@ -20,12 +21,12 @@ export const LivingSection = () => {
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
 
   // Re-init navigation after Swiper is ready
- useEffect(() => {
-  if (swiperInstance) {
-    swiperInstance.navigation?.update();
-    swiperInstance.pagination?.update();
-  }
-}, [swiperInstance, activeTab]);
+  useEffect(() => {
+    if (swiperInstance) {
+      swiperInstance.navigation?.update();
+      swiperInstance.pagination?.update();
+    }
+  }, [swiperInstance, activeTab]);
 
   return (
     <section
@@ -67,40 +68,43 @@ export const LivingSection = () => {
           }}
           pagination={{
             clickable: true,
+            el: paginationRef.current, 
             renderBullet: (_, className) =>
               `<span class="${className} w-2.5 h-2.5 rounded-full inline-block bg-gray-400 opacity-70 mx-1 transition-all duration-300"></span>`,
           }}
           navigation={{
-            // refs will be set in onSwiper below
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
           }}
-       onSwiper={(swiper) => {
-  setSwiperInstance(swiper);
+          onSwiper={(swiper) => {
+            setSwiperInstance(swiper);
 
-  if (
-    prevRef.current &&
-    nextRef.current &&
-    paginationRef.current &&
-    swiper.params.navigation &&
-    swiper.params.pagination
-  ) {
-    // 👇 Narrow the types safely
-    if (typeof swiper.params.navigation === 'object') {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-    }
+            // Wait for refs to mount before attaching
+            setTimeout(() => {
+              if (
+                prevRef.current &&
+                nextRef.current &&
+                paginationRef.current &&
+                swiper.params.navigation &&
+                swiper.params.pagination
+              ) {
+                if (typeof swiper.params.navigation === "object") {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                }
 
-    if (typeof swiper.params.pagination === 'object') {
-      swiper.params.pagination.el = paginationRef.current;
-    }
+                if (typeof swiper.params.pagination === "object") {
+                  swiper.params.pagination.el = paginationRef.current;
+                }
 
-    swiper.navigation.init();
-    swiper.navigation.update();
-    swiper.pagination.init();
-    swiper.pagination.render();
-    swiper.pagination.update();
-  }
-}}
-
+                swiper.navigation.init();
+                swiper.navigation.update();
+                swiper.pagination.init();
+                swiper.pagination.render();
+                swiper.pagination.update();
+              }
+            });
+          }}
         >
           {rooms[activeTab].map((item) => (
             <SwiperSlide key={item.id}>
@@ -110,7 +114,7 @@ export const LivingSection = () => {
         </Swiper>
       </div>
 
-      {/* Pagination bar BELOW the background section */}
+      {/* ✅ Custom Pagination + Arrows BELOW Swiper */}
       <div className="relative mt-8 flex justify-center">
         <div className="flex items-center gap-6">
           {/* Left Arrow */}
@@ -118,10 +122,10 @@ export const LivingSection = () => {
             ref={prevRef}
             className="cursor-pointer text-xl text-gray-700 hover:text-black transition-all select-none"
           >
-           <GoArrowLeft className="w-8 h-8" />
+            <GoArrowLeft className="w-8 h-8" />
           </div>
 
-          {/* Dots */}
+          {/* Pagination Dots */}
           <div
             ref={paginationRef}
             className="flex justify-center items-center gap-2 cursor-pointer"
@@ -132,7 +136,7 @@ export const LivingSection = () => {
             ref={nextRef}
             className="cursor-pointer text-xl transition-all text-gray-700 hover:text-black select-none"
           >
-           <GoArrowRight className="w-8 h-8" />
+            <GoArrowRight className="w-8 h-8" />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import Breadcrumb from '@/components/Common/Breadcrumb'
+
+import Breadcrumb from '@/components/common/Breadcrumb'
 import ProductDetail from '@/components/product/ProductDetail'
 
 const Product = () => {

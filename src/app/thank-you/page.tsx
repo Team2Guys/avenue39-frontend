@@ -1,5 +1,6 @@
-import Breadcrumb from "@/components/Common/Breadcrumb"
-import { VideoSection } from "@/components/Common/VideoSection"
+
+import { VideoSection } from "@/components/common"
+import Breadcrumb from "@/components/common/Breadcrumb"
 import { OrderSummary } from "@/components/OrderSummary"
 import RelatedProducts from "@/components/RelatedProducts"
 import { Thank } from "@/components/Thank"
