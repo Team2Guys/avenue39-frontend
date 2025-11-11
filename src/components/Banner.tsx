@@ -16,13 +16,7 @@ export const Banner: React.FC<BannerSectionProps> = ({
       style={{ height }}
     >
       {/* Background image */}
-      <Image
-        src={imageSrc}
-        alt={title || "Banner Image"}
-        fill
-        priority
-        className="object-cover"
-      />
+      <Image src={imageSrc} alt={title || "Banner Image"} fill priority className="object-cover" />
 
       {/* Optional overlay */}
       {overlay && (

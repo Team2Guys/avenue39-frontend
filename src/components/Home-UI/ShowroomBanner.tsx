@@ -38,12 +38,7 @@ export const ShowroomBanner: React.FC<ShowroomBannerProps> = ({
           className="w-full h-full object-cover"
         />
       ) : poster ? (
-        <Image
-          src={poster}
-          alt="Showroom Banner"
-          fill
-          className="object-cover"
-        />
+        <Image src={poster} alt="Showroom Banner" fill className="object-cover" />
       ) : null}
 
       <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white">
@@ -51,11 +46,8 @@ export const ShowroomBanner: React.FC<ShowroomBannerProps> = ({
           {title}
         </h2>
 
-        <button
-          onClick={handleTogglePlay}
-          className="mt-4 transition"
-        >
-            <Pause />
+        <button onClick={handleTogglePlay} className="mt-4 transition">
+          <Pause />
         </button>
       </div>
     </div>

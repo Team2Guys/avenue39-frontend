@@ -14,21 +14,11 @@ export const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc }) => {
   return (
     <div className="relative w-full h-[80vh] md:h-[90vh] overflow-hidden">
       {/* Background image */}
-      <Image
-        src={imageSrc}
-        alt="Room setup"
-        fill
-        className="object-cover"
-        priority
-      />
+      <Image src={imageSrc} alt="Room setup" fill className="object-cover" priority />
 
       {/* Hotspots */}
       {hotSpots.map((spot) => (
-        <div
-          key={spot.id}
-          className="absolute"
-          style={{ top: spot.top, left: spot.left }}
-        >
+        <div key={spot.id} className="absolute" style={{ top: spot.top, left: spot.left }}>
           {/* Button */}
           <button
             onClick={() => toggleHotspot(spot.id)}
@@ -41,7 +31,7 @@ export const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc }) => {
           {activeHotspot === spot.id && (
             <div className="absolute left-8 top-1/2 -translate-y-1/2 bg-white text-gray-800 shadow-lg p-3 min-w-40 z-10 border border-gray-200">
               <h4 className="font-extralight text-xs md:text-sm">{spot.name}</h4>
-              
+
               {spot.variations && (
                 <ul className="mt-1 text-xs text-gray-400 list-disc list-inside">
                   {spot.variations.map((v, i) => (
@@ -49,7 +39,9 @@ export const ProductHotspot: React.FC<ProductHotspotProps> = ({ imageSrc }) => {
                   ))}
                 </ul>
               )}
-              <p className="text-sm font-extralight font-alethia">DHS <span className="text-black font-light">{spot.price}</span></p>
+              <p className="text-sm font-extralight font-alethia">
+                DHS <span className="text-black font-light">{spot.price}</span>
+              </p>
             </div>
           )}
         </div>

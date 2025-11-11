@@ -23,11 +23,7 @@ const ProductSlider = () => {
             <div className="flex gap-4">
               {/* Product Image */}
               <div className="relative w-[110px] h-[110px]">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                />
+                <Image src={item.image} alt={item.title} fill />
               </div>
               <div className="flex flex-col justify-between">
                 {/* Product Title */}
@@ -36,9 +32,12 @@ const ProductSlider = () => {
 
                   {/* Prices */}
                   <div className="flex items-center space-x-3 text-[13px]">
-                    <span className="text-gray-400 line-through flex items-center gap-1"><Dollar className="w-4 h-4 invert-75" /> {item.regularPrice}
+                    <span className="text-gray-400 line-through flex items-center gap-1">
+                      <Dollar className="w-4 h-4 invert-75" /> {item.regularPrice}
                     </span>
-                    <span className="text-black font-bold flex items-center gap-1"><Dollar className="w-4 h-4" />{item.price}
+                    <span className="text-black font-bold flex items-center gap-1">
+                      <Dollar className="w-4 h-4" />
+                      {item.price}
                     </span>
                   </div>
                 </div>

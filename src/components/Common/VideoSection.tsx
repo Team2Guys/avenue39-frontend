@@ -25,24 +25,16 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
   };
 
   return (
-    <section
-      className={`w-full flex flex-col md:flex-row h-[234px] mt-5 lg:mt-14 ${height}`}
-    >
+    <section className={`w-full flex flex-col md:flex-row h-[234px] mt-5 lg:mt-14 ${height}`}>
       <div className="relative w-full md:w-1/2">
-        <video
-          ref={videoRef}
-          src={videoUrl}
-          className="w-full h-full object-cover"
-          loop
-          muted
-        />
+        <video ref={videoRef} src={videoUrl} className="w-full h-full object-cover" loop muted />
         <button
           onClick={handlePlayPause}
           className="absolute inset-0 flex items-center justify-center"
         >
           <div className="w-16 h-16 border-2 border-white flex items-center justify-center rounded-full transition cursor-pointer">
             {isPlaying ? (
-              <LuPause  className="text-white text-3xl" />
+              <LuPause className="text-white text-3xl" />
             ) : (
               <LuPlay className="text-white text-3xl ml-1" />
             )}
@@ -51,15 +43,9 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
       </div>
 
       <div className="w-full md:w-1/2 bg-black text-white flex flex-col justify-center items-center p-8 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-3">
-          {title}
-        </h2>
-        <p className="text-sm md:text-base max-w-md text-gray-300">
-          {description}
-        </p>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-3">{title}</h2>
+        <p className="text-sm md:text-base max-w-md text-gray-300">{description}</p>
       </div>
     </section>
   );
 };
-
-

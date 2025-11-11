@@ -15,15 +15,11 @@ const ContactForm: React.FC<ContactFormProps> = () => {
     },
   });
 
-  const inputClasses =
-    "w-full border border-gray-300 p-2 focus:outline-none focus:border-black";
+  const inputClasses = "w-full border border-gray-300 p-2 focus:outline-none focus:border-black";
   const errorClasses = "text-red-500 text-sm mt-1";
 
   return (
-    <form
-      onSubmit={formik.handleSubmit}
-      className="space-y-4 mx-auto font-light"
-    >
+    <form onSubmit={formik.handleSubmit} className="space-y-4 mx-auto font-light">
       {/* Name + Phone */}
       <div className="flex flex-col sm:flex-row gap-4 lg:gap-7">
         <div className="w-full">

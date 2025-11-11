@@ -7,7 +7,7 @@ const Breadcrumb = ({
   slug = "",
   subcategory = "",
   className = "",
-  careersName = ""
+  careersName = "",
 }: BreadcrumbProps & { className?: string }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -20,7 +20,7 @@ const Breadcrumb = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const arrow = "/"
+  const arrow = "/";
 
   return (
     <div
@@ -53,9 +53,7 @@ const Breadcrumb = ({
                 {subcategory.replace(/-/g, " ")}
               </Link>
             ) : (
-              <span className="capitalize  font-bold">
-                {subcategory.replace(/-/g, " ")}
-              </span>
+              <span className="capitalize  font-bold">{subcategory.replace(/-/g, " ")}</span>
             )}
           </>
         )}
@@ -70,9 +68,7 @@ const Breadcrumb = ({
                 {careersName.replace(/-/g, " ")}
               </Link>
             ) : (
-              <span className="capitalize  font-bold">
-                {careersName.replace(/-/g, " ")}
-              </span>
+              <span className="capitalize  font-bold">{careersName.replace(/-/g, " ")}</span>
             )}
           </>
         )}
@@ -80,9 +76,7 @@ const Breadcrumb = ({
         {title && (
           <>
             {arrow}
-            <span className=" font-medium capitalize">
-              {title.replace(/-/g, " ")}
-            </span>
+            <span className=" font-medium capitalize">{title.replace(/-/g, " ")}</span>
           </>
         )}
       </div>

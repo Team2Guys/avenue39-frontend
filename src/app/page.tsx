@@ -1,7 +1,11 @@
-
 import Breadcrumb from "@/components/common/Breadcrumb";
-import { AccessoriesBanner, BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components/home-ui";
-
+import {
+  AccessoriesBanner,
+  BestSelling,
+  HeroSection,
+  LivingSection,
+  ShowroomBanner,
+} from "@/components/home-ui";
 
 export default function Home() {
   return (
@@ -16,7 +20,6 @@ export default function Home() {
         buttonLink="/shop"
         className="h-[50vh]"
         sofa
-       
       />
       <HeroSection
         backgroundImage="/assets/images/home/interiorbanner.webp"
@@ -40,15 +43,15 @@ export default function Home() {
         id="target-section"
       />
       <LivingSection />
-       <BestSelling />
-       <AccessoriesBanner
+      <BestSelling />
+      <AccessoriesBanner
         title="Aesthetics Accessories"
         description="Curated luxury accessories that make a statement with elegance and style."
         imageUrl="/assets/images/home/accessories.webp"
         link="/shop"
         buttonText="Shop Now"
-    />
-     <ShowroomBanner
+      />
+      <ShowroomBanner
         videoSrc="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
         poster="/images/showroom-poster.png"
         height="h-[300px] md:h-[500px] xl:h-[810px]"

@@ -3,8 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Footer, Header } from "@/components/common";
 
-
-
 const alethiaNext = localFont({
   src: [
     {
@@ -45,8 +43,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      className={`${alethiaNext.variable} ${signatie.variable} ${alethiaExtraLight.variable} antialiased`}
+        className={`${alethiaNext.variable} ${signatie.variable} ${alethiaExtraLight.variable} antialiased`}
       >
+        <Header />
         {children}
         <Footer />
       </body>

@@ -7,17 +7,16 @@ import Link from "next/link";
 import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import Dollar from "./svgs/dollar";
 
-interface Props{
-product: Product; 
- } 
+interface Props {
+  product: Product;
+}
 export const ProductCard = ({ product }: Props) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
 
   const handleWishlistToggle = () => {
     setIsWishlisted((prev) => !prev);
 
-    const existingWishlist =
-      JSON.parse(localStorage.getItem("wishlist") || "[]") as Product[];
+    const existingWishlist = JSON.parse(localStorage.getItem("wishlist") || "[]") as Product[];
     if (!isWishlisted) {
       const updated = [...existingWishlist, product];
       localStorage.setItem("wishlist", JSON.stringify(updated));
@@ -42,51 +41,39 @@ export const ProductCard = ({ product }: Props) => {
 
       {/* Product Image */}
       <div className="relative w-full aspect-4/4 h-[408px] z-10">
-        <Image
-          src={product.image}
-          alt={product.title}
-          fill
-          className="object-cover rounded-xl"
-        />
+        <Image src={product.image} alt={product.title} fill className="object-cover rounded-xl" />
       </div>
 
       {/* Details */}
       <div className="py-4">
         <div className="flex justify-between items-center">
           <div className="flex justify-start items-center gap-1">
-            <h3 className="text-[16px] font-medium font-alethia">
-              {product.title}
-            </h3>
-            <p className="text-[16px] font-medium font-alethia">
-              {product.dimensions}
-            </p>
+            <h3 className="text-[16px] font-medium font-alethia">{product.title}</h3>
+            <p className="text-[16px] font-medium font-alethia">{product.dimensions}</p>
           </div>
 
-            <div className="flex gap-2">
+          <div className="flex gap-2">
             {product.colors.map((c, i) => {
-            const isImage = c.startsWith("/"); 
-            return isImage ? (
-            <div
-                key={i}
-                className="w-4 h-4 rounded-full overflow-hidden"
-            >
-                <Image
-                src={c}
-                alt={`Color option ${i + 1}`}
-                width={190}
-                height={190}
-                className="object-cover"
-                />
-            </div>
-            ) : (
-            <span
-                key={i}
-                className="w-4 h-4 rounded-full border"
-                style={{ backgroundColor: c }}
-            ></span>
-            );
+              const isImage = c.startsWith("/");
+              return isImage ? (
+                <div key={i} className="w-4 h-4 rounded-full overflow-hidden">
+                  <Image
+                    src={c}
+                    alt={`Color option ${i + 1}`}
+                    width={190}
+                    height={190}
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <span
+                  key={i}
+                  className="w-4 h-4 rounded-full border"
+                  style={{ backgroundColor: c }}
+                ></span>
+              );
             })}
-            </div>
+          </div>
         </div>
 
         {/* Prices */}
@@ -111,4 +98,3 @@ export const ProductCard = ({ product }: Props) => {
     </div>
   );
 };
-

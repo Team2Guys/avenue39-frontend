@@ -8,4 +8,4 @@ export const FiltersSidebar = () => {
       <p className="text-sm text-gray-500">Filter options coming soon...</p>
     </aside>
   );
-}
+};

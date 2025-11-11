@@ -56,13 +56,11 @@ const SideBySideMagnifier: FC<SideBySideMagnifierProps> = ({
           cursor: "none", // ✅ Hides default cursor
         }}
       >
-        <div
-          className="bg-[#F7F7F7] h-auto"
-        >
+        <div className="bg-[#F7F7F7] h-auto">
           <Image
             src={imageSrc}
             fill
-            alt={altText || 'product image'}
+            alt={altText || "product image"}
             className="relative! object-fill"
             priority
             fetchPriority="high"

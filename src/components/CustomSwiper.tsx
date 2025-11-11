@@ -26,14 +26,10 @@ const CustomSwiper = <T,>({
 }: CustomSwiperProps<T>) => {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
-  const swiperRef = useRef<SwiperClass | null>(null); 
+  const swiperRef = useRef<SwiperClass | null>(null);
 
   useEffect(() => {
-    if (
-      swiperRef.current &&
-      swiperRef.current.params &&
-      swiperRef.current.params.navigation
-    ) {
+    if (swiperRef.current && swiperRef.current.params && swiperRef.current.params.navigation) {
       const navigation = swiperRef.current.params.navigation as {
         prevEl: HTMLElement | null;
         nextEl: HTMLElement | null;
@@ -59,7 +55,7 @@ const CustomSwiper = <T,>({
           clickable: true,
           el: ".custom-pagination-dots",
         }}
-        onSwiper={(swiper) => (swiperRef.current = swiper)} 
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         breakpoints={{
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
@@ -77,7 +73,7 @@ const CustomSwiper = <T,>({
           ref={prevRef}
           className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
         >
-          <Leftarrow  className="w-5 h-5" />
+          <Leftarrow className="w-5 h-5" />
         </div>
 
         <div className="custom-pagination-dots flex justify-center items-center gap-2"></div>

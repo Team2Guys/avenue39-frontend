@@ -5,7 +5,6 @@ import { productsData } from "@/data/product";
 import { CategoryTabs } from "./CategoryTabs";
 import { ProductCard } from "./ProductCard";
 
-
 export const CategoryPage = () => {
   const categories = [
     "All",
@@ -21,9 +20,7 @@ export const CategoryPage = () => {
 
   // Filter by selected category
   const filteredProducts =
-    selected === "All"
-      ? productsData
-      : productsData.filter((p) => p.category === selected);
+    selected === "All" ? productsData : productsData.filter((p) => p.category === selected);
 
   // Slice visible products
   const visibleProducts = filteredProducts.slice(0, visibleCount);
@@ -41,11 +38,9 @@ export const CategoryPage = () => {
 
   return (
     <div className="px-2 lg:px-4 sm:mt-10">
-        <div className="text-center font-alethia my-5 lg:my-7 uppercase text-[19px]">Dinning</div>
+      <div className="text-center font-alethia my-5 lg:my-7 uppercase text-[19px]">Dinning</div>
       {/* Category Tabs */}
-      <CategoryTabs
-        categories={categories}
-      />
+      <CategoryTabs categories={categories} />
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mt-6">
@@ -60,7 +55,7 @@ export const CategoryPage = () => {
         {visibleCount < filteredProducts.length && (
           <button
             onClick={handleViewMore}
-           className="px-6 py-3 bg-black text-white text-[16px] xl:w-1/6 font-alethia transition-all duration-200 cursor-pointer hover:bg-black/85"
+            className="px-6 py-3 bg-black text-white text-[16px] xl:w-1/6 font-alethia transition-all duration-200 cursor-pointer hover:bg-black/85"
           >
             Show More
           </button>
@@ -70,7 +65,7 @@ export const CategoryPage = () => {
         {visibleCount > 12 && (
           <button
             onClick={handleShowLess}
-           className="px-6 py-3 bg-black text-white text-[16px] xl:w-1/8 font-alethia transition-all duration-200 cursor-pointer hover:bg-black/85"
+            className="px-6 py-3 bg-black text-white text-[16px] xl:w-1/8 font-alethia transition-all duration-200 cursor-pointer hover:bg-black/85"
           >
             Show Less
           </button>
@@ -79,4 +74,3 @@ export const CategoryPage = () => {
     </div>
   );
 };
-

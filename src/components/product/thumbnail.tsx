@@ -20,14 +20,12 @@ interface ThumbnailProps {
 const Thumbnail = ({ images = [] }: ThumbnailProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
-
-
   if (images.length === 0) return null;
 
   return (
     <div>
       {/* ===== MAIN IMAGE SWIPER ===== */}
-      <div className='mt-4'>
+      <div className="mt-4">
         <Swiper
           modules={[Pagination, Thumbs]}
           pagination={{ clickable: true }}
@@ -50,7 +48,7 @@ const Thumbnail = ({ images = [] }: ThumbnailProps) => {
       </div>
 
       {/* ===== THUMBNAILS SWIPER ===== */}
-      <div className='mt-4'>
+      <div className="mt-4">
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={40}
@@ -73,7 +71,6 @@ const Thumbnail = ({ images = [] }: ThumbnailProps) => {
           ))}
         </Swiper>
       </div>
-
     </div>
   );
 };

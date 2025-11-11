@@ -1,4 +1,3 @@
-
 export const products = [
   {
     id: 1,
@@ -29,10 +28,10 @@ export const products = [
     title: "Siberian Living Room Set",
     price: "3,400",
     regularPrice: "2,400",
-   image: "/assets/images/bin/r4.webp",
-   colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    image: "/assets/images/bin/r4.webp",
+    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
-   {
+  {
     id: 1,
     title: "Sapori Dining Table (d:130 cm)",
     price: "3,400",

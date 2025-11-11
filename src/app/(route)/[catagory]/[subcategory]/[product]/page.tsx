@@ -1,8 +1,8 @@
-import { Testimonial } from '@/components/about-us'
-import Breadcrumb from '@/components/common/Breadcrumb'
-import ProductDetail from '@/components/product/ProductDetail'
-import RelatedProducts from '@/components/RelatedProducts'
-import { products } from '@/data/relatedproduct'
+import { Testimonial } from "@/components/about-us";
+import Breadcrumb from "@/components/common/Breadcrumb";
+import ProductDetail from "@/components/product/ProductDetail";
+import RelatedProducts from "@/components/RelatedProducts";
+import { products } from "@/data/relatedproduct";
 
 const Product = () => {
   return (
@@ -12,7 +12,7 @@ const Product = () => {
       <RelatedProducts products={products} />;
       <Testimonial />
     </>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

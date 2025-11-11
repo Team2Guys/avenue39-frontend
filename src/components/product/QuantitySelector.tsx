@@ -1,6 +1,11 @@
 "use client";
-const QuantitySelector = ({quantity, setQuantity}: {quantity: number, setQuantity: React.Dispatch<React.SetStateAction<number>>}) => {
-
+const QuantitySelector = ({
+  quantity,
+  setQuantity,
+}: {
+  quantity: number;
+  setQuantity: React.Dispatch<React.SetStateAction<number>>;
+}) => {
   const decrease = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };

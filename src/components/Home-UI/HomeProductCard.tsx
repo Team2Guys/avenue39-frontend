@@ -1,4 +1,3 @@
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +15,7 @@ export interface Product {
   image: string;
   buttonText?: string;
   link?: string;
-  icon?: string; 
+  icon?: string;
 }
 export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
   const IconComponent = item.icon
@@ -26,10 +25,7 @@ export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
   const isShopNow = item.buttonText?.toLowerCase().includes("shop");
 
   return (
-    <div
-      className="relative bg-black/70 text-white overflow-hidden group shadow-lg cursor-pointer"
-    >
-
+    <div className="relative bg-black/70 text-white overflow-hidden group shadow-lg cursor-pointer">
       <div className="relative h-[400px] lg:h-[609px]">
         <Image
           src={item.image}
@@ -41,26 +37,23 @@ export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
       </div>
 
- 
       <div className="absolute bottom-0 left-0 w-full p-5">
-     
         <div className="flex items-center gap-2 mb-2">
           {IconComponent && <IconComponent className="text-lg text-white" />}
           <h3 className="text-[20px] font-normal font-alethia">{item.title}</h3>
         </div>
 
-        <p className="text-sm mb-3 xl:w-[50%] font-alethia font-extralight">
-          {item.description}
-        </p>
+        <p className="text-sm mb-3 xl:w-[50%] font-alethia font-extralight">{item.description}</p>
 
         {item.buttonText && (
           <Link
             href={item.link ?? "#"}
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium shadow-[0_4px_10px_rgba(0,0,0,0.4)] transition-all duration-300 
             opacity-100 translate-y-0 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0
-            ${isShopNow
-              ? "bg-white text-black hover:bg-gray-100"
-              : "border border-white text-white hover:bg-white hover:text-black"
+            ${
+              isShopNow
+                ? "bg-white text-black hover:bg-gray-100"
+                : "border border-white text-white hover:bg-white hover:text-black"
             }`}
           >
             {isShopNow && <PiShoppingCartLight size={18} />}
@@ -71,4 +64,3 @@ export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
     </div>
   );
 };
-

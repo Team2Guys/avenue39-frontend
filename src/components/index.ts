@@ -9,5 +9,4 @@ export * from "./Thank";
 export * from "./ContactInfo";
 export * from "./RelatedProducts";
 export * from "./CustomSwiper";
-export * from "./OrderSummary"
-
+export * from "./OrderSummary";

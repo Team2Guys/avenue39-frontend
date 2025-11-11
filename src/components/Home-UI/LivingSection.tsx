@@ -20,7 +20,6 @@ export const LivingSection = () => {
 
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
 
-
   useEffect(() => {
     if (swiperInstance) {
       swiperInstance.navigation?.update();
@@ -68,7 +67,7 @@ export const LivingSection = () => {
           }}
           pagination={{
             clickable: true,
-             el: ".custom-pagination-dots",
+            el: ".custom-pagination-dots",
             renderBullet: (_, className) =>
               `<span class="${className} w-2 h-2 rounded-full bg-gray-400 inline-block"></span>`,
           }}

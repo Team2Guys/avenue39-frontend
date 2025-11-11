@@ -3,8 +3,7 @@ export const rooms = {
     {
       id: 1,
       title: "Munich Leather Hinge Chair",
-      description:
-        "360° swivel. Sleek steel base. Soft leather. Style and comfort in one.",
+      description: "360° swivel. Sleek steel base. Soft leather. Style and comfort in one.",
       image: "/assets/images/home/munich.webp",
       buttonText: "Shop Now",
       link: "/shop",
@@ -25,7 +24,6 @@ export const rooms = {
       image: "/assets/images/home/garona.webp",
       buttonText: "Shop Now",
       link: "/shop",
-      
     },
     {
       id: 4,
@@ -35,9 +33,8 @@ export const rooms = {
       image: "/assets/images/home/garona.webp",
       buttonText: "Shop Now",
       link: "/shop",
-      
     },
-     {
+    {
       id: 5,
       title: "Gerona Coffee Table and Side Table",
       description:
@@ -45,9 +42,8 @@ export const rooms = {
       image: "/assets/images/home/garona.webp",
       buttonText: "Shop Now",
       link: "/shop",
-      
     },
-     {
+    {
       id: 6,
       title: "Gerona Coffee Table and Side Table",
       description:
@@ -55,7 +51,6 @@ export const rooms = {
       image: "/assets/images/home/garona.webp",
       buttonText: "Shop Now",
       link: "/shop",
-      
     },
   ],
 
@@ -82,8 +77,7 @@ export const rooms = {
     {
       id: 1,
       title: "Aurora Bed Frame",
-      description:
-        "Modern bed frame with soft-touch upholstery and durable build.",
+      description: "Modern bed frame with soft-touch upholstery and durable build.",
       image: "/assets/images/home/munich.webp",
       buttonText: "Shop Now",
       link: "/shop",

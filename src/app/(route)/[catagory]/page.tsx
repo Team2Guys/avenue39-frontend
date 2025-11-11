@@ -2,22 +2,18 @@ import { CategoryPage } from "@/components/Category";
 import { VideoSection } from "@/components/common";
 import Breadcrumb from "@/components/common/Breadcrumb";
 
-
 const Category = () => {
   return (
     <div>
-       <Breadcrumb title='Category'/>
-        <CategoryPage />;
-        <VideoSection
+      <Breadcrumb title="Category" />
+      <CategoryPage />;
+      <VideoSection
         videoUrl="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
         title="Lorem Ipsum is simply dummy text"
         description="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's."
         height="480px"
       />
     </div>
-  )
-}
-export default Category
-
-
-
+  );
+};
+export default Category;

@@ -1,4 +1,3 @@
-
 export const sampleItems = [
   {
     id: 1,
