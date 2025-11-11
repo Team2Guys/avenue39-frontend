@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import PaymentMethod from "../ui/payment"
-import Thumbnail from "./thumbnail"
+import Thumbnail from "./Thumbnail"
 import { MdOutlineInfo } from "react-icons/md"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion"
 import Dollar from "../Svgs/dollar"
