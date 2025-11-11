@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroSectionProps } from "@/types/home.type";
-import DropDown from "../svgs/dropdown";
+import DropDown from "../Svgs/dropdown";
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage,
@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id={id}
-      className={`relative w-full sm:h-[90vh] flex items-center justify-center text-white ${className}`}
+      className={`relative w-full h-[310px] sm:h-[90vh] flex items-center justify-center text-white mt-2 ${className}`}
     >
       <Image
         src={backgroundImage}

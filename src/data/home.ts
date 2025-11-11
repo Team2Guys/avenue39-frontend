@@ -1,5 +1,3 @@
-
-
 export const Links = [
   { label: "Delivery", href: "/delivery" },
   { label: "Shipping", href: "/shipping" },
@@ -11,17 +9,17 @@ export const MenuItems = [
     name: "Dining",
     link: "/dining",
   },
-   {
+  {
     name: "Living",
     link: "/living",
   },
-   {
+  {
     name: "Bedroom",
     link: "/bedroomg",
   },
   {
     name: "Home",
-    link: "/home",
+    link: "/",
   },
   {
     name: "Chairs",

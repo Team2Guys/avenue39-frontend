@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Modal from "../ui/Modal";
 import { SearchIcon } from "lucide-react";
@@ -12,9 +12,9 @@ const SearchBar = ({ className }: { className?: string }) => {
     <div className={`${className}`}>
       <div className="hidden md:flex border border-black px-4 gap-2 p-2 items-center w-full ">
         <SearchIcon size={22} />
-        <input className="outline-none w-full text-sm" type="text"/>
+        <input className="outline-none w-full text-sm" type="text" />
       </div>
-      <button className="md:hidden p-2" onClick={handleOpen} aria-label="Open search modal">
+      <button className="md:hidden p-3" onClick={handleOpen} aria-label="Open search modal">
         <SearchIcon size={25} />
       </button>
       <Modal isOpen={isModalOpen} onClose={handleClose}>

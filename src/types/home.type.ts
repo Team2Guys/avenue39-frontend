@@ -179,3 +179,13 @@ export interface DropdownPanelProps {
   viewLink?: string;
   emptyMessage?: string;
 }
+
+export interface DrawerProps {
+  title: React.ReactNode;
+  content: React.ReactNode;
+  open: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+  width?: number;
+  className?: string;
+}

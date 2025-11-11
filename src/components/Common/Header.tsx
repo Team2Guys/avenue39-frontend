@@ -1,15 +1,14 @@
-import { Topbar } from "../home-ui";
+import { Topbar } from "../Home-UI";
 import Bottombar from "./Bottombar";
 import Navbar from "./Navbar";
 import Subbar from "./Subbar";
 export const Header = () => {
   return (
-
-    <div>
+    <div className="sticky top-0 z-50 bg-white">
       <Topbar />
-      <Subbar/>
+      <Subbar />
       <Navbar />
-      <Bottombar/>
+      <Bottombar />
     </div>
   );
 };

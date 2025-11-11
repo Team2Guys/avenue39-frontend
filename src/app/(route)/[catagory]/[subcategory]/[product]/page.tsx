@@ -1,5 +1,5 @@
 import { Testimonial } from "@/components/about-us";
-import Breadcrumb from "@/components/common/Breadcrumb";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 import ProductDetail from "@/components/product/ProductDetail";
 import RelatedProducts from "@/components/RelatedProducts";
 import { products } from "@/data/relatedproduct";
