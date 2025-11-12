@@ -1,3 +1,4 @@
+"use client"
 import { SideBySideMagnifierProps } from "@/types/product";
 import Image from "next/image";
 import { useState, useRef, useEffect, FC } from "react";

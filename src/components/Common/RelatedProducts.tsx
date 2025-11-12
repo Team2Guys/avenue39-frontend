@@ -1,12 +1,10 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
-import CustomSwiper from "./CustomSwiper";
-import Button from "./common/CommonButton";
-import Dollar from "./svgs/dollar";
 import { RelatedProductsProps } from "@/types/home.type";
-
+import Dollar from "../svgs/dollar";
+import Button from "./CommonButton";
+import CustomSwiper from "../ui/CustomSwiper";
 const RelatedProducts: React.FC<RelatedProductsProps> = ({
   title = "Related Product",
   subtitle = "Indulge in the height of luxury with our best-selling furniture where unparalleled comfort meets timeless sophistication.",

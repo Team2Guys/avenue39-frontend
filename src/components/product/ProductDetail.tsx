@@ -3,7 +3,6 @@ import Image from "next/image";
 import PaymentMethod from "../ui/payment";
 import Thumbnail from "./thumbnail";
 import { MdOutlineInfo } from "react-icons/md";
-
 import Dollar from "../svgs/dollar";
 import QuantitySelector from "./QuantitySelector";
 import { useState } from "react";

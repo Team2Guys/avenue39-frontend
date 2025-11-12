@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
-import DropdownPanel from "../DropDownPanel";
+
 import { cartItems, wishlistItems } from "@/data/Cart";
-import Account from "../svgs/account";
-import Carticon from "../svgs/carticon";
-import Hearticon from "../svgs/hearticon";
+import DropdownPanel from "./DropDownPanel";
+import Hearticon from "@/components/svgs/hearticon";
+import Carticon from "@/components/svgs/carticon";
+import Account from "@/components/svgs/account";
+
 
 const UserIcons = ({ className }: { className?: string }) => {
   return (

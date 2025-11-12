@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import Modal from "../ui/Modal";
+
 import { SearchIcon } from "lucide-react";
+import Modal from "@/components/ui/Modal";
 
 const SearchBar = ({ className }: { className?: string }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

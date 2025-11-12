@@ -1,7 +1,6 @@
 "use client";
-
+import { productsData } from "@/data";
 import { useState } from "react";
-import { productsData } from "@/data/product";
 import { CategoryTabs } from "./CategoryTabs";
 import { ProductCard } from "./ProductCard";
 
@@ -41,7 +40,6 @@ export const CategoryPage = () => {
       <div className="text-center font-alethia my-5 lg:my-7 uppercase text-[19px]">Dinning</div>
       {/* Category Tabs */}
       <CategoryTabs categories={categories} />
-
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mt-6">
         {visibleProducts.map((product) => (

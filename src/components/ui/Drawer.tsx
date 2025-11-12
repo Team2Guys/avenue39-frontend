@@ -1,6 +1,6 @@
 "use client";
 import { DrawerProps } from "@/types/home.type";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
 
 export const Drawer = ({ title, content, open, onOpen, onClose, className }: DrawerProps) => {

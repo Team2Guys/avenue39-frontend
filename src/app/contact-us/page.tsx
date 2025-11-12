@@ -1,7 +1,5 @@
-import { Banner } from "@/components/Banner";
-import { VideoSection } from "@/components/common";
-import Breadcrumb from "@/components/common/Breadcrumb";
-import Call from "@/components/ContactInfo";
+import { Banner, ContactInfo, VideoSection } from "@/components";
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
 const ContactUs = () => {
   return (
     <>
@@ -11,7 +9,7 @@ const ContactUs = () => {
         title="Get in Touch"
         height="285px"
       />
-      <Call />
+      <ContactInfo/>
       <VideoSection
         videoUrl="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
         title="Lorem Ipsum is simply dummy text"

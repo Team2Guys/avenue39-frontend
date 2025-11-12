@@ -1,8 +1,8 @@
-import { Testimonial } from "@/components/about-us";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import { Testimonial } from "@/components";
+import RelatedProducts from "@/components/common/RelatedProducts";
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
 import ProductDetail from "@/components/product/ProductDetail";
-import RelatedProducts from "@/components/RelatedProducts";
-import { products } from "@/data/relatedproduct";
+import { products } from "@/data";
 
 const Product = () => {
   return (

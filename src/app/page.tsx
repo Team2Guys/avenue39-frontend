@@ -4,7 +4,8 @@ import {
   HeroSection,
   LivingSection,
   ShowroomBanner,
-} from "@/components/Home-UI";
+} from "@/components";
+
 
 export default function Home() {
   return (
@@ -55,13 +56,6 @@ export default function Home() {
         height="h-[300px] md:h-[500px] xl:h-[810px]"
         title="The Showroom With Visit Us"
       />
-      {/* <main className="flex justify-center items-center min-h-screen bg-gray-100">
-        <ProductHotspot
-          imageSrc="/assets/images/home/hotspot.webp"
-          hotSpots={hotSpots}
-        />
-    </main>
-       */}
     </>
   );
 }

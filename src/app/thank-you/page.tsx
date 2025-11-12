@@ -1,11 +1,7 @@
-import { VideoSection } from "@/components/common";
-import Breadcrumb from "@/components/common/Breadcrumb";
-import { OrderSummary } from "@/components/OrderSummary";
-import RelatedProducts from "@/components/RelatedProducts";
-import { Thank } from "@/components/Thank";
-import { sampleItems } from "@/data/order";
-import { products } from "@/data/relatedproduct";
-
+import { OrderSummary, Thank, VideoSection } from "@/components";
+import RelatedProducts from "@/components/common/RelatedProducts";
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
+import { products, sampleItems } from "@/data";
 const Thankyou = () => {
   return (
     <>

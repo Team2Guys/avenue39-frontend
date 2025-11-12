@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 const Bottombar = () => {
   return (
     <h2 className="font-alethia font-extralight text-[16px] uppercase text-center">

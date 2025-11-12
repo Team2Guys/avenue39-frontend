@@ -1,8 +1,9 @@
 "use client";
 import { contactDetails } from "@/data/contact";
-import ContactForm from "./ContactForm";
+
 import Link from "next/link";
-const CntactInfo = () => {
+import ContactForm from "./ContactForm";
+export const ContactInfo = () => {
   return (
     <>
       <div className="container mx-auto flex flex-col lg:flex-row-reverse gap-5 mt-3 lg:mt-5 xl:my-7 px-2">
@@ -46,4 +47,4 @@ const CntactInfo = () => {
   );
 };
 
-export default CntactInfo;
+export default ContactInfo;
