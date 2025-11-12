@@ -1,4 +1,3 @@
-
 export interface Product {
   id: number;
   image: string;
@@ -45,7 +44,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 4,
     image: "/assets/images/bin/4.jpg",
     title: "Athena Coffee Table",
@@ -56,7 +55,7 @@ export const productsData: Product[] = [
     link: "/products/athena-coffee-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 5,
     image: "/assets/images/bin/5.jpg",
     title: "Florence Coffee Table",
@@ -67,7 +66,7 @@ export const productsData: Product[] = [
     link: "/products/florence-coffee-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 6,
     image: "/assets/images/bin/6.jpg",
     title: "Florence Coffee Table",
@@ -78,7 +77,7 @@ export const productsData: Product[] = [
     link: "/products/florence-coffee-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 7,
     image: "/assets/images/bin/7.jpg",
     title: "Asana Dining Table",
@@ -89,7 +88,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 8,
     image: "/assets/images/bin/8.jpg",
     title: "Magia Office Desk",
@@ -100,7 +99,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 9,
     image: "/assets/images/bin/9.jpg",
     title: "Tavola Bedside Table",
@@ -111,7 +110,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 10,
     image: "/assets/images/bin/10.jpg",
     title: "Sapori Dining Table",
@@ -122,7 +121,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 11,
     image: "/assets/images/bin/11.jpg",
     title: "Eleganza Office Desk",
@@ -133,7 +132,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 12,
     image: "/assets/images/bin/12.jpg",
     title: "Magia Office Deske",
@@ -144,7 +143,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 13,
     image: "/assets/images/bin/12.jpg",
     title: "Magia Office Deske",
@@ -155,7 +154,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 14,
     image: "/assets/images/bin/12.jpg",
     title: "Magia Office Deske",
@@ -166,7 +165,7 @@ export const productsData: Product[] = [
     link: "/products/tavola-bedside-table",
     category: "Bedside Tables",
   },
-   {
+  {
     id: 15,
     image: "/assets/images/bin/12.jpg",
     title: "Magia Office Deske",

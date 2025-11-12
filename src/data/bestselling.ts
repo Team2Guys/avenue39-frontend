@@ -8,7 +8,11 @@ export const bestSelling: BestsellingProps[] = [
     category: "Our Full Collection",
     price: "Dhs. 4,500",
     image: "/assets/images/home/1.webp",
-    colors: ["/assets/images/home/c1.jpg", "/assets/images/home/c2.jpg", "/assets/images/home/c3.jpg"],
+    colors: [
+      "/assets/images/home/c1.jpg",
+      "/assets/images/home/c2.jpg",
+      "/assets/images/home/c3.jpg",
+    ],
   },
   {
     id: 2,
@@ -55,7 +59,7 @@ export const bestSelling: BestsellingProps[] = [
     image: "/assets/images/home/4.webp",
     colors: ["/assets/images/home/c4.jpg", "/assets/images/home/c4.jpg"],
   },
-   {
+  {
     id: 7,
     title: "Siberian Living Room Set",
     category: "Our Full Collection",
@@ -64,7 +68,7 @@ export const bestSelling: BestsellingProps[] = [
     image: "/assets/images/home/4.webp",
     colors: ["/assets/images/home/c4.jpg", "/assets/images/home/c4.jpg"],
   },
-   {
+  {
     id: 8,
     title: "Siberian Living Room Set",
     category: "Our Full Collection",
@@ -73,5 +77,4 @@ export const bestSelling: BestsellingProps[] = [
     image: "/assets/images/home/4.webp",
     colors: ["/assets/images/home/c4.jpg", "/assets/images/home/c4.jpg"],
   },
-  
 ];

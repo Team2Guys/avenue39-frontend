@@ -1,9 +1,9 @@
-import { Testimonial } from '@/components/about-us'
-import Breadcrumb from '@/components/Common/Breadcrumb'
-import FooterVideoSection from '@/components/Common/FooterVideoSection'
-import ProductDetail from '@/components/product/ProductDetail'
-import RelatedProducts from '@/components/RelatedProducts'
-import { products } from '@/data/relatedproduct'
+import { Testimonial } from "@/components";
+import RelatedProducts from "@/components/common/RelatedProducts";
+import FooterVideoSection from '@/components/common/FooterVideoSection'
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
+import ProductDetail from "@/components/product/ProductDetail";
+import { products } from "@/data";
 
 const Product = () => {
   return (
@@ -14,7 +14,7 @@ const Product = () => {
       <Testimonial />
       <FooterVideoSection />
     </>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

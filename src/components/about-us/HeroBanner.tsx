@@ -19,10 +19,9 @@ export const HeroBanner = () => {
           Elevate your everyday living
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-[#FFFFFFB0] font-light">
-          Interiors by{" "}
-          <span className="underline underline-offset-4">Avenue39</span>
+          Interiors by <span className="underline underline-offset-4">Avenue39</span>
         </p>
       </div>
     </section>
   );
-}
+};

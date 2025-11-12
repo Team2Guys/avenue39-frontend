@@ -31,6 +31,6 @@ export interface ITamaraList {
 }
 
 export interface PaymentMethodProps {
-  showheading?: boolean
-  installments: number
+  showheading?: boolean;
+  installments: number;
 }

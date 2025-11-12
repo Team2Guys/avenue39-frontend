@@ -1,13 +1,13 @@
-export * from "./Category";
-export * from "./CategoryTabs";
-export * from "./FilterSidebar";
-export * from "./ProductCard";
-export * from "./ContactInfo";
-export * from "./Banner";
-export * from "./ContactForm";
-export * from "./Thank";
-export * from "./ContactInfo";
-export * from "./RelatedProducts";
-export * from "./CustomSwiper";
-export * from "./OrderSummary"
+export * from "./common";
+export * from "./about-us"
+export * from "./category"
+export * from "./contact"
+export * from "./footer"
+export * from "./home-ui"
+export * from "./layout"
+export * from "./product"
+export * from "./thankyou"
+export * from "./ui"
+export * from "./svgs"
+
 

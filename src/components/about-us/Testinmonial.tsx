@@ -50,9 +50,7 @@ export const Testimonial = () => {
   return (
     <div className="p-2 md:p-6 mt-10 mb-10 space-y-10">
       <div className="max-w-3xl mx-auto text-center space-y-2">
-        <h2 className="text-2xl md:text-4xl font-light">
-          What Our Customers Think About Us
-        </h2>
+        <h2 className="text-2xl md:text-4xl font-light">What Our Customers Think About Us</h2>
         <p>
           Indulge in the height of luxury with our best-selling furniture
           <br />
@@ -72,12 +70,7 @@ export const Testimonial = () => {
             >
               <div className="flex items-center gap-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden">
-                  <Image
-                    src={item.avatar}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                  />
+                  <Image src={item.avatar} alt={item.name} fill className="object-cover" />
                 </div>
                 <div>
                   <p className="font-medium text-xl">{item.name}</p>
