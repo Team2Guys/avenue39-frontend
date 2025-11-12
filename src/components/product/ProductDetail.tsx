@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import PaymentMethod from "../ui/payment";
-import Thumbnail from "./Thumbnail";
+
 import { MdOutlineInfo } from "react-icons/md";
 import Dollar from "../svgs/dollar";
 import QuantitySelector from "./QuantitySelector";
 import { useState } from "react";
 import ProductSlider from "./ProductSlider";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/Accordion";
+import Thumbnail from "./Thumbnail";
 
 const productData = {
   name: "Sapori DinAing Table (d:130 cm)",

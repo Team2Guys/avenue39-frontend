@@ -1,5 +1,5 @@
 "use client";
-import { useState} from "react";
+import { useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,11 +1,6 @@
-import {
-  BestSelling,
-  HeroSection,
-  LivingSection,
-  ShowroomBanner,
-} from "@/components";
+import { BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components";
 import HeroSplitSection from "@/components/home-ui/HerosplitSection";
-
+import ShopbyCategory from "@/components/home-ui/ShopbyCategory";
 
 export default function Home() {
   return (
@@ -29,14 +24,17 @@ export default function Home() {
         hidebutton
         className="h-[50vh]"
       />
-        <HeroSplitSection
+      <HeroSplitSection
         title="ELEVATE YOUR SPACE WITH LUXURIOUS SOFAS!"
         subtitle="Timeless Comfort, Effortless Style"
         buttonLabel="Shop Now"
         buttonLink="/shop"
-         imageSrc="/assets/images/home/elevate.webp"
+        imageSrc="/assets/images/home/elevate.webp"
       />
-       <HeroSplitSection
+      <ShopbyCategory />
+      <LivingSection />
+      <BestSelling />
+      <HeroSplitSection
         title="Aesthetics Accessories"
         subtitle="Curated luxury accessories that make a 
         statement with elegance and style."
@@ -45,8 +43,6 @@ export default function Home() {
         imageSrc="/assets/images/home/fan.webp"
         reverse
       />
-      <LivingSection />
-      <BestSelling />
       <ShowroomBanner
         videoSrc="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
         poster="/assets/images/bin/videoImg.jpg"

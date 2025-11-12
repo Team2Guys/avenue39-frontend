@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import Leftarrow from "../svgs/leftarrow";
 import Rightarrow from "../svgs/rightarrow";
 
-
 interface CustomSwiperProps<T> {
   items: T[];
   renderItem: (item: T, index: number) => ReactNode;

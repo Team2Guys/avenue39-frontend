@@ -204,3 +204,9 @@ export interface ExtendedModalProps extends ModalProps {
   width?: number | string;
   height?: number | string;
 }
+
+export interface ShopbyCategoryProps {
+  title: string;
+  imgSrc: string;
+  link: string;
+}
