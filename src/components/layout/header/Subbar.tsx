@@ -12,7 +12,7 @@ const Subbar = () => {
   const [open, setOpen] = useState(false);
   const onClose = () => setOpen(false);
   return (
-    <div className="container mx-auto flex justify-between items-center p-2 sm:px-0 lg:my-5 shadow md:shadow-none">
+    <div className="container mx-auto flex justify-between items-center p-2 sm:px-0 border-b sm:border-b-0">
       <div className="flex justify-center items-center">
         {/* Drawer: visible only on small screens */}
         <div className="block md:hidden">

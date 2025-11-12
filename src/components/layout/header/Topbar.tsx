@@ -2,7 +2,7 @@ import { Links } from "@/data/home";
 import Link from "next/link";
 export const Topbar = () => {
   return (
-    <div className="border-b shadow-sm">
+    <div className="border-b">
       <div className="container mx-auto flex justify-center items-center md:justify-start gap-5 md:items-center text-black py-2">
         {Links.map((link) => (
           <Link
