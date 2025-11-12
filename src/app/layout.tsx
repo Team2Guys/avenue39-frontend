@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Footer, Header } from "@/components/common";
+import {  Header } from "@/components/common";
+import Footer from "@/components/layout/footer/Footer";
 
 const alethiaNext = localFont({
   src: "../../public/assets/font/alethianext-light.otf",

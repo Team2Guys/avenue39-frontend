@@ -49,9 +49,9 @@ export default function Home() {
       <BestSelling />
       <ShowroomBanner
         videoSrc="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
-        poster="/images/showroom-poster.png"
+        poster="/assets/images/bin/videoImg.jpg"
         height="h-[300px] md:h-[500px] xl:h-[810px]"
-        title="The Showroom With Visit Us"
+        title="The Showroom With <br>Visit Us"
       />
     </>
   );
