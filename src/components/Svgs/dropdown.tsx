@@ -1,7 +1,7 @@
 const DropDown = () => {
   return (
     <svg
-      className="h-10 w-10"
+      className="h-6 w-6 sm:h-10 sm:w-10"
       width="55"
       height="46"
       viewBox="0 0 55 46"

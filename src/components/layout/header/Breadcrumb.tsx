@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BreadcrumbProps } from "@/types/home.type";
 const Breadcrumb = ({
@@ -9,24 +8,13 @@ const Breadcrumb = ({
   className = "",
   careersName = "",
 }: BreadcrumbProps & { className?: string }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 5);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+ 
 
   const arrow = "/";
 
   return (
     <div
-      className={`z-20 w-full p-2 bg-white hidden sm:block border-t border-[#E2E2E2] text-[13px] ${
-        isScrolled ? "fixed" : "absolute"
-      } ${className}`}
+      className={`z-20 w-full p-2 bg-white hidden sm:block border-t border-[#E2E2E2] text-[13px]  ${className}`}
     >
       <div className="container mx-auto flex items-center gap-2 sm:gap-4">
         <Link href="/" className="capitalize text-[#BFBFBF]">

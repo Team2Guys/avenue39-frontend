@@ -1,4 +1,4 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 
 // Home/Herosection
 export interface HeroSectionProps {
@@ -13,7 +13,6 @@ export interface HeroSectionProps {
   hidebutton?: boolean;
   sofa?: boolean;
   id?: string;
-  elevate?: boolean;
 }
 
 export interface Product {
@@ -24,16 +23,6 @@ export interface Product {
   image: string;
   colors: string[];
 }
-
-export interface AccessoriesBannerProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  buttonText?: string;
-  reverse?: boolean;
-}
-
 export interface BestsellingProps {
   id: number;
   title: string;
@@ -187,5 +176,15 @@ export interface DrawerProps {
   onOpen: () => void;
   onClose: () => void;
   width?: number;
+  className?: string;
+}
+
+export interface HeroSplitSectionProps {
+  title: string;
+  subtitle?: string;
+  buttonLabel: string;
+  buttonLink: string;
+  imageSrc: string;
+  reverse?: boolean; 
   className?: string;
 }

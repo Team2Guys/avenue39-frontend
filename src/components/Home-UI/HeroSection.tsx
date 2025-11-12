@@ -5,7 +5,6 @@ import Link from "next/link";
 import { HeroSectionProps } from "@/types/home.type";
 import DropDown from "../svgs/dropdown";
 
-
 export const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage,
   title,
@@ -17,7 +16,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   interior = false,
   hidebutton = false,
   sofa = false,
-  elevate = false,
   id,
 }) => {
   const handleScroll = () => {
@@ -30,36 +28,41 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id={id}
-      className={`relative w-full h-[310px] sm:h-[90vh] flex items-center justify-center text-white mt-7 ${className}`}
+      className={`relative w-full h-[319px] sm:h-[60vh] lg:h-[809px] flex items-start justify-center pt-6 sm:pt-20 text-white mt-2 md:mt-0 ${className}`}
     >
       <Image
         src={backgroundImage}
         alt={title}
         fill
         priority
-        className="object-cover absolute inset-0 z-0"
+        className="object-cover absolute inset-0 z-0 lg:h-[809px]"
       />
 
       <div
-        className={`relative z-20 text-center w-[280px] sm:w-2xl ${elevate ? "text-start flex flex-col justify-center items-start max-w-2xl my-4 sm:h-[84vh]" : ""} ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl" : ""} px-4 p-5`}
+        className={`relative z-20 text-center w-[343px] h-auto sm:w-[70%] lg:w-[477px] lg:h-[220px] ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl xl:h-[277px] " : ""} p-3`}
       >
         <div
-          className={`absolute inset-0 ${interior ? "bg-white/10 border border-white/20 rounded-xl" : "bg-black/70"} -z-10`}
-        ></div>
-        <div className="lg:ml-20">
+          className={`absolute inset-0 ${interior ? "bg-white/20 border border-white/20" : "bg-black/60"} -z-10`}
+        >
+
+        </div>
+
+        <div className={`flex flex-col justify-center items-center space-y-1  ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl xl:h-[277px] " : ""} `}>
           <h2
-            className={`text-3xl text-gray-300 lg:text-[33px] tracking-wide ${interior ? "font-light" : "uppercase font-extralight"} font-alethia`}
+            className={`text-3xl xl:text-[44px] tracking-wide ${interior ? "font-normal text-[24px]" : "uppercase font-extralight"} font-alethia`}
           >
             {title}
           </h2>
+
           {subtitle && (
-            <h3 className="text-gray-300 text-lg md:text-2xl lg:text-[33px] mt-2 font-extralight uppercase tracking-wider font-alethia">
+            <h3 className="text-lg md:text-2xl xl:text-[32px] font-extralight uppercase tracking-wider font-alethia">
               {subtitle}
             </h3>
           )}
+
           {highlightText && (
             <p
-              className={`text-xl mt-3 text-gray-300 ${interior ? "font-alethia text-[32px]" : sofa ? "font-signatie italic text-[44px] font-extralight" : ""} ${elevate ? "text-[23px] font-extralight" : ""}`}
+              className={`text-[20px] ${interior ? "font-alethia xl:text-[32px] font-extralight" : sofa ? "font-signatie italic text-[24px] md:text-[34px] font-extralight" : ""}`}
             >
               {highlightText}
             </p>
@@ -68,15 +71,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {buttonLabel && buttonLink && (
             <Link
               href={buttonLink}
-              className="inline-block mt-6 border border-white bg-black px-6 py-2 uppercase text-[16px] tracking-widest hover:bg-white hover:text-black transition-all"
+              className={`inline-block ${sofa ? "mt-0" : "mt-6"} border border-white w-full sm:w-[50%] py-2 uppercase text-[16px] tracking-[0.25em] hover:bg-white hover:text-black transition-all`}
             >
               {buttonLabel}
             </Link>
           )}
         </div>
       </div>
+
       <div
-        className={`${hidebutton ? "hidden" : ""} cursor-pointer absolute bottom-5 sm:bottom-28 z-20`}
+        className={`${hidebutton ? "hidden" : ""} cursor-pointer absolute bottom-5 lg:bottom-28 z-20`}
         onClick={handleScroll}
       >
         <DropDown />
