@@ -3,6 +3,12 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { PlusIcon, MinusIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+interface AccordionTriggerProps
+  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> {
+  isIconArrows?: boolean;
+}
 
 function Accordion({ ...props }: React.ComponentProps<typeof AccordionPrimitive.Root>) {
   return <AccordionPrimitive.Root data-slot="accordion" {...props} />;
@@ -25,8 +31,9 @@ function AccordionItem({
 function AccordionTrigger({
   className,
   children,
+  isIconArrows = false,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
+}: AccordionTriggerProps) {
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
@@ -38,12 +45,23 @@ function AccordionTrigger({
         {...props}
       >
         {children}
+        {isIconArrows ? (
+          <>
+            {/* Plus icon (visible when closed) */}
+            <IoIosArrowDown  className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-all duration-200 group-data-[state=open]:hidden" />
 
-        {/* Plus icon (visible when closed) */}
-        <PlusIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-all duration-200 group-data-[state=open]:hidden" />
+            {/* Minus icon (visible when open) */}
+            <IoIosArrowUp className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-all duration-200 hidden group-data-[state=open]:block" />
+          </>
+        ) : (
+          <>
+            {/* Plus icon (visible when closed) */}
+            <PlusIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-all duration-200 group-data-[state=open]:hidden" />
 
-        {/* Minus icon (visible when open) */}
-        <MinusIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-all duration-200 hidden group-data-[state=open]:block" />
+            {/* Minus icon (visible when open) */}
+            <MinusIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-all duration-200 hidden group-data-[state=open]:block" />
+          </>
+        )}
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

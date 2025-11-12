@@ -8,3 +8,4 @@ export * from "./header/Search";
 export * from "./header/Subbar";
 export * from "./header/Topbar";
 export * from "./header/Usericon"
+export * from "./footer/Footer"
