@@ -5,6 +5,7 @@ import {
   LivingSection,
   ShowroomBanner,
 } from "@/components";
+import HotspotImage from "@/components/home-ui/HotspotImage";
 
 
 export default function Home() {
@@ -50,9 +51,10 @@ export default function Home() {
         link="/shop"
         buttonText="Shop Now"
       />
+      <HotspotImage height="h-[300px] md:h-[500px] xl:h-[810px]" imageUrl="/assets/images/home/living-room.webp" />
       <ShowroomBanner
         videoSrc="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
-        poster="/assets/images/bin/videoImg.jpg"
+        poster="/assets/images/bin/videoImg.webp"
         height="h-[300px] md:h-[500px] xl:h-[810px]"
         title="The Showroom With <br>Visit Us"
       />

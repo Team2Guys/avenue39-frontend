@@ -4,7 +4,7 @@ const FooterVideoSection = () => {
     return (
         <div className="py-10 grid grid-cols-2">
             <div className="relative h-60">
-                <Image src='/assets/images/bin/videoImg.jpg' alt="" fill className="object-cover" />
+                <Image src='/assets/images/bin/videoImg.webp' alt="" fill className="object-cover" />
             </div>
             <div className="bg-black text-white flex justify-center items-center flex-col gap-4">
                 <h4 className="font-alethiaLight text-2xl font-bold">Lorem Ipsum is simply dummy text </h4>
