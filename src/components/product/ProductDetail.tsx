@@ -10,6 +10,8 @@ import ProductSlider from "./ProductSlider";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/Accordion";
 import Thumbnail from "./Thumbnail";
 
+
+
 const productData = {
   name: "Sapori DinAing Table (d:130 cm)",
   regularPrice: "3400",
