@@ -1,7 +1,7 @@
 import Link from "next/link";
 const Bottombar = () => {
   return (
-    <h2 className="font-alethia font-extralight text-[16px] uppercase text-center">
+    <h2 className="font-alethia font-extralight text-[16px] uppercase text-center mb-2">
       <span className="underline">AVENUE39 MEMBERS Program</span>{" "}
       <Link href="" className="">
         SAVE 30% ON EVERYTHING*

@@ -1,5 +1,3 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
 // Home/Herosection
 export interface HeroSectionProps {
   backgroundImage: string;
@@ -13,7 +11,6 @@ export interface HeroSectionProps {
   hidebutton?: boolean;
   sofa?: boolean;
   id?: string;
-  elevate?: boolean;
 }
 
 export interface Product {
@@ -24,16 +21,6 @@ export interface Product {
   image: string;
   colors: string[];
 }
-
-export interface AccessoriesBannerProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  buttonText?: string;
-  reverse?: boolean;
-}
-
 export interface BestsellingProps {
   id: number;
   title: string;
@@ -188,4 +175,38 @@ export interface DrawerProps {
   onClose: () => void;
   width?: number;
   className?: string;
+}
+
+export interface HeroSplitSectionProps {
+  title: string;
+  subtitle?: string;
+  buttonLabel: string;
+  buttonLink: string;
+  imageSrc: string;
+  reverse?: boolean;
+  className?: string;
+}
+
+// searchprops
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+  className?: string;
+  paymentModal?: boolean;
+}
+
+export interface ExtendedModalProps extends ModalProps {
+  title?: string;
+  open?: boolean;
+  onOk?: () => void;
+  onCancel?: () => void;
+  width?: number | string;
+  height?: number | string;
+}
+
+export interface ShopbyCategoryProps {
+  title: string;
+  imgSrc: string;
+  link: string;
 }

@@ -1,4 +1,4 @@
-export * from "./AccessoriesBanner";
+
 export * from "./BestSelling";
 export * from "./HeroSection";
 export * from "./LivingSection";

@@ -1,12 +1,7 @@
-import {
-  AccessoriesBanner,
-  BestSelling,
-  HeroSection,
-  LivingSection,
-  ShowroomBanner,
-} from "@/components";
+import { BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components";
+import HeroSplitSection from "@/components/home-ui/HerosplitSection";
 import HotspotImage from "@/components/home-ui/HotspotImage";
-
+import ShopbyCategory from "@/components/home-ui/ShopbyCategory";
 
 export default function Home() {
   return (
@@ -30,26 +25,24 @@ export default function Home() {
         hidebutton
         className="h-[50vh]"
       />
-      <HeroSection
-        backgroundImage="/assets/images/home/sofabanner.webp"
-        title="Elevate Your Space"
-        subtitle="with Luxurious Sofas!"
-        highlightText="Timeless Comfort, Effortless Style"
+      <HeroSplitSection
+        title="ELEVATE YOUR SPACE WITH LUXURIOUS SOFAS!"
+        subtitle="Timeless Comfort, Effortless Style"
         buttonLabel="Shop Now"
         buttonLink="/shop"
-        hidebutton
-        className="flex text-start items-start justify-start"
-        elevate
-        id="target-section"
+        imageSrc="/assets/images/home/elevate.webp"
       />
+      <ShopbyCategory />
       <LivingSection />
       <BestSelling />
-      <AccessoriesBanner
+      <HeroSplitSection
         title="Aesthetics Accessories"
-        description="Curated luxury accessories that make a statement with elegance and style."
-        imageUrl="/assets/images/home/accessories.webp"
-        link="/shop"
-        buttonText="Shop Now"
+        subtitle="Curated luxury accessories that make a 
+        statement with elegance and style."
+        buttonLabel="Shop Now"
+        buttonLink="/shop"
+        imageSrc="/assets/images/home/fan.webp"
+        reverse
       />
       <HotspotImage height="h-[300px] md:h-[500px] xl:h-[810px]" imageUrl="/assets/images/home/living-room.webp" />
       <ShowroomBanner
