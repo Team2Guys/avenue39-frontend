@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       />
 
       <div
-        className={`relative z-20 text-center w-[343px] h-auto sm:w-[70%] lg:w-[477px] lg:h-[220px] ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl xl:h-[277px] " : ""} p-3`}
+        className={`relative z-20 text-center w-[343px] h-auto sm:w-[70%] lg:h-[220px] ${interior ? "w-[300px] sm:w-lg md:w-2xl xl:w-5xl xl:h-[277px] " : ""} p-3`}
       >
         <div
           className={`absolute inset-0 ${interior ? "bg-white/20 border border-white/20" : "bg-black/60"} -z-10`}

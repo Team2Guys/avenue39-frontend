@@ -3,42 +3,47 @@ import { ShopbyCategoryProps } from "@/types/home.type";
 export const categories: ShopbyCategoryProps[] = [
   {
     title: "Sofas",
-    imgSrc: "/images/categories/sofa.jpg",
+    imgSrc: "/assets/images/home/shop/1.webp",
     link: "/collections/sofas",
   },
   {
     title: "Chairs",
-    imgSrc: "/images/categories/chair.jpg",
+    imgSrc: "/assets/images/home/shop/2.webp",
     link: "/collections/chairs",
   },
   {
     title: "Tables",
-    imgSrc: "/images/categories/table.jpg",
+   imgSrc: "/assets/images/home/shop/3.webp",
     link: "/collections/tables",
   },
   {
     title: "Beds",
-    imgSrc: "/images/categories/bed.jpg",
+    imgSrc: "/assets/images/home/shop/4.webp",
+    link: "/collections/beds",
+  },
+ {
+    title: "Sofas",
+    imgSrc: "/assets/images/home/shop/1.webp",
+    link: "/collections/sofas",
+  },
+  {
+    title: "Chairs",
+    imgSrc: "/assets/images/home/shop/2.webp",
+    link: "/collections/chairs",
+  },
+  {
+    title: "Tables",
+   imgSrc: "/assets/images/home/shop/3.webp",
+    link: "/collections/tables",
+  },
+  {
+    title: "Beds",
+    imgSrc: "/assets/images/home/shop/4.webp",
     link: "/collections/beds",
   },
   {
     title: "Sofas",
-    imgSrc: "/images/categories/sofa.jpg",
+    imgSrc: "/assets/images/home/shop/1.webp",
     link: "/collections/sofas",
-  },
-  {
-    title: "Chairs",
-    imgSrc: "/images/categories/chair.jpg",
-    link: "/collections/chairs",
-  },
-  {
-    title: "Tables",
-    imgSrc: "/images/categories/table.jpg",
-    link: "/collections/tables",
-  },
-  {
-    title: "Beds",
-    imgSrc: "/images/categories/bed.jpg",
-    link: "/collections/beds",
   },
 ];

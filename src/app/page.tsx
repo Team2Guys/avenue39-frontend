@@ -1,6 +1,9 @@
 import { BestSelling, HeroSection, LivingSection, ShowroomBanner } from "@/components";
+import { DiscountBanner } from "@/components/home-ui/DiscountBanner";
 import HeroSplitSection from "@/components/home-ui/HerosplitSection";
-import ShopbyCategory from "@/components/home-ui/ShopbyCategory";
+import ShopByCategory from "@/components/home-ui/ShopbyCategory";
+import { categories } from "@/data/shopbycategory";
+import { Byroom } from "@/data/shopbyroom";
 
 export default function Home() {
   return (
@@ -31,7 +34,20 @@ export default function Home() {
         buttonLink="/shop"
         imageSrc="/assets/images/home/elevate.webp"
       />
-      <ShopbyCategory />
+     <ShopByCategory
+      title="Shop by Category"
+      items={categories}
+      isSwiper={true}
+    />
+
+      <DiscountBanner/>
+     <ShopByCategory
+      title="Shop by Room"
+      items={Byroom}
+      isSwiper={true} 
+      responsiveStaticOnLarge={true} 
+       />
+
       <LivingSection />
       <BestSelling />
       <HeroSplitSection

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef, useId } from "react";
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -15,6 +15,8 @@ interface CustomSwiperProps<T> {
   slidesPerView?: number;
   spaceBetween?: number;
   className?: string;
+  prevArrow?: ReactNode; // ✅ allow custom left arrow
+  nextArrow?: ReactNode; // ✅ allow custom right arrow
 }
 
 const CustomSwiper = <T,>({
@@ -23,13 +25,19 @@ const CustomSwiper = <T,>({
   slidesPerView = 1.2,
   spaceBetween = 20,
   className,
+  prevArrow,
+  nextArrow,
 }: CustomSwiperProps<T>) => {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const swiperRef = useRef<SwiperClass | null>(null);
 
+  // ✅ Safe unique ID for pagination
+  const uniqueId = useId();
+  const paginationClass = `custom-pagination-${uniqueId}`;
+
   useEffect(() => {
-    if (swiperRef.current && swiperRef.current.params && swiperRef.current.params.navigation) {
+    if (swiperRef.current && swiperRef.current.params?.navigation) {
       const navigation = swiperRef.current.params.navigation as {
         prevEl: HTMLElement | null;
         nextEl: HTMLElement | null;
@@ -38,7 +46,6 @@ const CustomSwiper = <T,>({
       navigation.prevEl = prevRef.current;
       navigation.nextEl = nextRef.current;
 
-      // Re-init navigation
       swiperRef.current.navigation.destroy();
       swiperRef.current.navigation.init();
       swiperRef.current.navigation.update();
@@ -53,7 +60,7 @@ const CustomSwiper = <T,>({
         slidesPerView={slidesPerView}
         pagination={{
           clickable: true,
-          el: ".custom-pagination-dots",
+          el: `.${paginationClass}`,
         }}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         breakpoints={{
@@ -68,21 +75,22 @@ const CustomSwiper = <T,>({
         ))}
       </Swiper>
 
-      <div className="flex justify-center items-center gap-6 mt-10 py-2 rounded-full w-fit mx-auto px-6">
+      {/* ✅ Navigation + Pagination */}
+      <div className="flex justify-center items-center gap-3 lg:gap-6 mt-5 py-2 rounded-full w-fit mx-auto px-6 bg-white">
         <div
           ref={prevRef}
           className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
         >
-          <Leftarrow className="w-5 h-5" />
+          {prevArrow || <Leftarrow className="w-5 h-5" />} {/* ✅ fallback to default */}
         </div>
 
-        <div className="custom-pagination-dots flex justify-center items-center gap-2"></div>
+        <div className={`${paginationClass} flex justify-center items-center gap-2`}></div>
 
         <div
           ref={nextRef}
           className="cursor-pointer text-xl text-gray-600 hover:text-black transition-all select-none"
         >
-          <Rightarrow className="w-5 h-5" />
+          {nextArrow || <Rightarrow className="w-5 h-5" />} {/* ✅ fallback to default */}
         </div>
       </div>
     </div>
