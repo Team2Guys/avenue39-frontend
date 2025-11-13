@@ -59,7 +59,7 @@ export default function Footer() {
                     key={i}
                     className="font-alethiaLight text-base cursor-pointer"
                   >
-                    {link}
+                    <Link href={link.url}>{link.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -79,12 +79,14 @@ export default function Footer() {
             <Link
               href="mailto:cs@avenue39.com"
               className="font-alethiaLight block text-base cursor-pointer mb-2"
+              target="_blank"
             >
               cs@avenue39.com
             </Link>
             <Link
               href="tel:+971505974495"
               className="font-alethiaLight block text-base cursor-pointer mb-2"
+              target="_blank"
             >
               +971 50 597 4495
             </Link>
@@ -141,18 +143,21 @@ export default function Footer() {
               <Link
                 href="#"
                 className="flex items-center justify-center h-7 w-7 border border-black rounded-full"
+                target="_blank"
               >
                 <FaFacebookF size={17} />
               </Link>
               <Link
                 href="#"
                 className="flex items-center justify-center h-7 w-7 border border-black rounded-full"
+                target="_blank"
               >
                 <FaInstagram size={17} />
               </Link>
               <Link
                 href="#"
                 className="flex items-center justify-center h-7 w-7 border border-black rounded-full"
+                target="_blank"
               >
                 <FaPinterest size={17} />
               </Link>
@@ -172,7 +177,7 @@ export default function Footer() {
                         key={i}
                         className="font-alethiaLight text-base cursor-pointer"
                       >
-                        {link}
+                        <Link href={link.url}>{link.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -196,12 +201,14 @@ export default function Footer() {
                 <Link
                   href="mailto:cs@avenue39.com"
                   className="font-alethiaLight block text-base mb-2"
+                  target="_blank"
                 >
                   cs@avenue39.com
                 </Link>
                 <Link
                   href="tel:+971505974495"
                   className="font-alethiaLight block text-base mb-2"
+                  target="_blank"
                 >
                   +971 50 597 4495
                 </Link>

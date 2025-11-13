@@ -1,5 +1,4 @@
 
-export * from "./BestSelling";
 export * from "./HeroSection";
 export * from "./LivingSection";
 export * from "./HomeProductCard";

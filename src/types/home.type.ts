@@ -27,8 +27,8 @@ export interface BestsellingProps {
   link: string;
   category: string;
   price: string;
-  image: string;
-  colors: string[];
+  discountprice: string;
+  images: string[];
 }
 
 export interface ProductCardProps {

@@ -47,3 +47,4 @@ export const categories: ShopbyCategoryProps[] = [
     link: "/collections/sofas",
   },
 ];
+
