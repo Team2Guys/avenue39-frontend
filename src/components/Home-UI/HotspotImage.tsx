@@ -4,42 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { GoChevronRight } from "react-icons/go";
 import Dollar from "../svgs/dollar";
+import { hotspots } from "@/data/hotspot";
 
 export default function HotspotImage({ height, imageUrl }: { height: string, imageUrl: string }) {
-    const [activeId, setActiveId] = useState(2); // default active (sofa)
-
-    const hotspots = [
-        {
-            id: 1,
-            top: "54%", left: "16%",
-            title: "Chrome Side Table",
-            price: "950",
-            description: "Modern metallic side table with lamp setup."
-        },
-        {
-            id: 2,
-            top: "45%", left: "51%",
-            title: "Hallie Sofa",
-            variant: '(3 Seater - White)',
-            price: "4,200",
-            description: "Soft-touch fabric with deep seating for comfort."
-        },
-        {
-            id: 3,
-            top: "68%", left: "55%",
-            title: "Marble Coffee Tables",
-            variant:'(set of 2)',
-            price: "1,800",
-            description: "Elegant marble top coffee tables with black frame."
-        },
-        {
-            id: 4,
-            top: "62%", left: "84%",
-            title: "TV Console Unit",
-            price: "2,400",
-            description: "White lacquered media unit with storage."
-        },
-    ];
+    const [activeId, setActiveId] = useState(2); 
 
     return (
         <div className={` relative w-full ${height}`}>
@@ -65,12 +33,18 @@ export default function HotspotImage({ height, imageUrl }: { height: string, ima
 
                     {/* Tooltip Info Box */}
                     <div
-                        className={`absolute top-[-120%] left-[110%] lg:left-[120%] w-[110px] lg:w-[115px] flex
-              bg-white transition-opacity duration-300
-              ${activeId === spot.id ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"}
-            `}
-                    >
-
+                        className={`absolute 
+                            top-[-120%] left-[50%] translate-x-[-50%]   // 📱 Mobile: center above dot
+                            md:top-[-90%] md:left-[110%] md:translate-x-0   // 📱 Small screens: small shift
+                            lg:left-[120%] lg:w-[115px]                    // 💻 Desktop layout
+                            w-[110px] flex bg-white transition-opacity duration-300
+                            ${activeId === spot.id
+                                ? "opacity-100 visible"
+                                : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                            }
+                        `}
+                        >
+                            
                         <div className="p-2 font-alethiaLight">
                             <p className="text-xs">{spot.title}</p>
                             {spot.variant && <p className="text-[8px]">{spot.variant}</p>}

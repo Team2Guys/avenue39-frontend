@@ -17,8 +17,8 @@ interface ShopByCategoryProps {
   items: CategoryItem[];
   slidesPerView?: number;
   spaceBetween?: number;
-  isSwiper?: boolean; // Toggle Swiper behavior
-  responsiveStaticOnLarge?: boolean; // ✅ Use static 4-item grid on large screens
+  isSwiper?: boolean; 
+  responsiveStaticOnLarge?: boolean; 
   prevArrow?: React.ReactNode;
   nextArrow?: React.ReactNode;
 }
@@ -35,9 +35,9 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
 }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(true);
 
-  // ✅ Detect screen width for responsive behavior
+  
   useEffect(() => {
-    if (!responsiveStaticOnLarge) return; // Only apply for second section
+    if (!responsiveStaticOnLarge) return; 
 
     const handleResize = () => setIsSmallScreen(window.innerWidth < 1024);
     handleResize();
@@ -45,7 +45,6 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, [responsiveStaticOnLarge]);
 
-  // ✅ Decide rendering mode
   const useSwiper = isSwiper && (!responsiveStaticOnLarge || isSmallScreen);
 
   return (
@@ -55,7 +54,7 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
       </div>
 
       {useSwiper ? (
-        // ✅ Swiper mode
+  
         <CustomSwiper
           items={items}
           slidesPerView={slidesPerView}

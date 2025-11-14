@@ -68,10 +68,23 @@ const CustomSwiper = <T,>({
         modules={[Navigation, Pagination]}
         spaceBetween={spaceBetween}
         slidesPerView={slidesPerView}
-        pagination={{
-          clickable: true,
-          el: `.${paginationClass}`,
-        }}
+       pagination={{
+  clickable: true,
+  el: `.${paginationClass}`,
+  renderBullet: (index, className) => {
+    const maxDots = 8; 
+    const total = items.length;
+
+    const groupSize = Math.ceil(total / maxDots);
+
+    if (index % groupSize === 0) {
+      return `<span class="${className}"></span>`;
+    }
+
+    return "";
+  },
+}}
+
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         breakpoints={breakpoints || defaultBreakpoints} // ✅ uses prop if passed
         className="pb-8"

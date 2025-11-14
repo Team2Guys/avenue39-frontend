@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       />
 
       <div
-        className={`relative z-20 text-center w-[343px] h-auto sm:w-[70%] lg:h-[220px] ${interior ? "flex flex-col justify-center items-center space-y-1 w-[300px] sm:w-lg md:w-2xl xl:w-4xl xl:h-[277px] " : "lg:w-[477px]"} p-3`}
+        className={`relative z-20 text-center  h-auto sm:w-[70%] lg:h-[220px] xl:h-[240px] ${interior ? "flex flex-col justify-center items-center space-y-1 w-[300px] cxxs:w-[343px] sm:w-lg md:w-2xl xl:w-4xl xl:h-[277px] " : "lg:w-[477px] xl:w-[600px] "} p-3`}
       >
         <div
           className={`absolute inset-0 ${interior ? "bg-white/70 backdrop-blur-[1px] border border-white/70" : "bg-black/60"} -z-10`}
@@ -49,20 +49,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         <div>
           <h2
-            className={`xl:text-[44px] tracking-wide ${interior ? "font-normal text-[24px] text-black" : "uppercase font-extralight"} font-alethia`}
+            className={`xl:text-[44px] tracking-wide ${interior ? "font-normal text-[24px] text-black mb-2" : "cx:text-[24px] cxxs:text-[32px] uppercase font-extralight"} font-alethia`}
           >
             {title}
           </h2>
 
           {subtitle && (
-            <h3 className={`text-lg md:text-2xl xl:text-[32px] font-extralight ${interior ? " text-black" : ""} uppercase tracking-wider font-alethia`}>
+            <h3 className={`text-lg md:text-2xl xl:text-[32px] font-extralight ${interior ? " text-black text-[20px]" : "cx:text-[24px] cxxs:text-[32px]"} uppercase tracking-wider font-alethia`}>
               {subtitle}
             </h3>
           )}
 
           {highlightText && (
             <p
-              className={`text-[20px] ${interior ? "font-alethia xl:text-[32px] font-extralight text-black" : sofa ? "font-signatie italic text-[24px] md:text-[34px] font-extralight" : ""}`}
+              className={`text-[20px] ${interior ? "font-alethia xl:text-[32px] font-extralight text-black" : sofa ? "font-signatie italic text-[24px] md:text-[34px] font-extralight mb-2" : ""}`}
             >
               {highlightText}
             </p>

@@ -27,7 +27,7 @@ const HeroSplitSection: React.FC<HeroSplitSectionProps> = ({
         className={`absolute inset-0 flex flex-col items-center justify-center sm:justify-start sm:items-start ${reverse ? "flex-row-reverse" : ""}`}
       >
         <div
-          className={`bg-white/80 flex flex-col justify-center items-start p-3 sm:p-10 lg:p-12 sm:h-[550px] mt-5 w-[343px] ${reverse ? "sm:mr-5 items-end  h-[212px]" : "sm:ml-5"}  h-[196px] sm:w-[55%] lg:w-[40%] xl:w-[598px] xl:h-[761px] text-start lg:text-left`}
+          className={`bg-white/80 flex flex-col justify-center items-start p-3 sm:p-10 lg:p-12 sm:h-[550px] mt-5 cx:w-[300px] cxxs:w-[343px] ${reverse ? "sm:mr-5 items-end  h-[212px]" : "sm:ml-5"}  h-[196px] sm:w-[55%] lg:w-[40%] xl:w-[598px] xl:h-[761px] text-start lg:text-left`}
         >
           <h2 className="text-[20px] sm:text-2xl  xl:text-[33px] font-light font-alethia leading-tight">
             {title}
