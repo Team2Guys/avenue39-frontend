@@ -1,6 +1,6 @@
 import { OrderSummary, Thank, VideoSection } from "@/components";
 import RelatedProducts from "@/components/common/RelatedProducts";
-import Breadcrumb from "@/components/layout/header/Breadcrumb";
+import Breadcrumb from "@/components/layout/header/BreadCrumb";
 import { products, sampleItems } from "@/data";
 const Thankyou = () => {
   return (

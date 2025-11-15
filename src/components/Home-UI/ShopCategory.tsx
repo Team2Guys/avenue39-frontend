@@ -1,29 +1,12 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CustomSwiper from "../ui/CustomSwiper";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { ShopByCategoryProps } from "@/types/shop.by.category";
 
-interface CategoryItem {
-  title: string;
-  imgSrc: string;
-  link: string;
-}
-
-interface ShopByCategoryProps {
-  title?: string;
-  items: CategoryItem[];
-  slidesPerView?: number;
-  spaceBetween?: number;
-  isSwiper?: boolean; 
-  responsiveStaticOnLarge?: boolean; 
-  prevArrow?: React.ReactNode;
-  nextArrow?: React.ReactNode;
-}
-
-const ShopByCategory: React.FC<ShopByCategoryProps> = ({
+export const ShopByCategory = ({
   title,
   items,
   slidesPerView = 1.2,
@@ -32,13 +15,11 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
   responsiveStaticOnLarge = false,
   prevArrow,
   nextArrow,
-}) => {
+}:ShopByCategoryProps) => {
   const [isSmallScreen, setIsSmallScreen] = useState(true);
 
-  
   useEffect(() => {
     if (!responsiveStaticOnLarge) return; 
-
     const handleResize = () => setIsSmallScreen(window.innerWidth < 1024);
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -46,7 +27,6 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
   }, [responsiveStaticOnLarge]);
 
   const useSwiper = isSwiper && (!responsiveStaticOnLarge || isSmallScreen);
-
   return (
     <section className="sm:container sm:mx-auto py-3 lg:py-12 bg-white pl-3 sm:px-2">
       <div className="text-center mb-3 lg:mb-8">
@@ -54,7 +34,6 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
       </div>
 
       {useSwiper ? (
-  
         <CustomSwiper
           items={items}
           slidesPerView={slidesPerView}
@@ -74,7 +53,7 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
                 className="object-cover w-full h-[337px]"
               />
               <div className="absolute inset-0 bg-black/30 flex items-end justify-start p-4">
-                <h3 className="text-white font-alethia text-[20px] font-light">{item.title}</h3>
+                <h3 className="text-white font-alethia text-[20px] font-light lg:text-[36px]">{item.title}</h3>
               </div>
             </Link>
           )}
@@ -96,7 +75,7 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
                 className="object-cover w-full h-[337px]"
               />
               <div className="absolute inset-0 bg-black/30 flex items-end justify-start p-4">
-                <h3 className="text-white font-alethia text-[20px] font-light">{item.title}</h3>
+                <h3 className="text-white font-alethia text-[20px] lg:text-[36px] font-light">{item.title}</h3>
               </div>
             </Link>
           ))}
@@ -106,4 +85,4 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
   );
 };
 
-export default ShopByCategory;
+

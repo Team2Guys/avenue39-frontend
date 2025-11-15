@@ -6,16 +6,9 @@ import tabbyLogo from "../../../public/assets/images/payment-icons/tabby-logo.pn
 import tamaraLogo from "../../../public/assets/images/payment-icons/tamara-logo.webp";
 import { PaymentMethodProps } from "@/types/product";
 import Modal from "./Modal";
-import {
-  tabbyfeature,
-  tabbyhowitwork,
-  tabbypayicon,
-  tamarafeature,
-  tamaralist,
-  tamarawhy,
-} from "@/data/produuct-detail";
-import { formatAED } from "@/utils/helperFunctions";
 import Dollar from "../svgs/dollar";
+import { tabbyFeature, tabbyhowitWork, tabbyPayicon, tamaraFeature, tamaraList, tamaraWhy } from "@/data/product-detail";
+import { formatAED } from "@/lib/utils";
 
 const PaymentMethod = ({ showheading, installments }: PaymentMethodProps) => {
   const [tabbyOpen, setTabbyOpen] = useState(false);
@@ -108,14 +101,14 @@ const PaymentMethod = ({ showheading, installments }: PaymentMethodProps) => {
             </span>
           </h2>
           <ul className='mt-5 font-bold text-lg xs:text-2xl sm:text-xl md:text-xl list-["–"] list-inside leading-normal md:leading-normal'>
-            {tabbyfeature.map((item) => (
+            {tabbyFeature.map((item) => (
               <li key={item.id}>{item.para}</li>
             ))}
           </ul>
           <div className="mt-5">
             <h3 className="font-bold text-2xl sm:text-3xl">How it works</h3>
             <ul className="font-medium text-lg xs:text-xl md:text-2xl mt-3 md:leading-relaxed">
-              {tabbyhowitwork.map((item) => (
+              {tabbyhowitWork.map((item) => (
                 <li className="flex items-center gap-2" key={item.id}>
                   <span className="rounded-full bg-lightbackground min-w-10 h-10 flex items-center justify-center">
                     {item.id}
@@ -127,7 +120,7 @@ const PaymentMethod = ({ showheading, installments }: PaymentMethodProps) => {
           </div>
 
           <div className="flex justify-end gap-2 mt-5 px-6">
-            {tabbypayicon.map((item, index) => (
+            {tabbyPayicon.map((item, index) => (
               <Image
                 src={item.imageUrl}
                 alt="master"
@@ -150,7 +143,7 @@ const PaymentMethod = ({ showheading, installments }: PaymentMethodProps) => {
           <div className="px-4 py-2 bg-linear-to-r from-orange-300 via-blue-300 to-pink-300 mt-4 rounded-[70px]">
             <div className="bg-linear-to-r from-orange-100 via-blue-100 to-pink-100 pb-6 pt-1 px-8 rounded-[70px] flex flex-col gap-2">
               <div className="w-10/12 mx-auto">
-                {tamarafeature.map((item) => (
+                {tamaraFeature.map((item) => (
                   <div className="flex justify-between items-center py-2" key={item.id}>
                     <div>
                       <h3 className="font-bold text-lg">{item.title}</h3>
@@ -164,7 +157,7 @@ const PaymentMethod = ({ showheading, installments }: PaymentMethodProps) => {
           <div className="mt-5 xs:px-10 2xl:px-20">
             <h3 className="font-bold text-2xl">Why Tamara?</h3>
             <div className="flex items-center flex-wrap 2xl:flex-nowrap justify-center 2xl:justify-between gap-1 sm:gap-4 pt-4">
-              {tamarawhy.map((item) => (
+              {tamaraWhy.map((item) => (
                 <div
                   className="w-auto px-2 h-9 rounded-2xl bg-primary text-white flex items-center justify-center text-20 font-semibold"
                   key={item.id}
@@ -175,7 +168,7 @@ const PaymentMethod = ({ showheading, installments }: PaymentMethodProps) => {
             </div>
             <div className="mt-5">
               <ul className="font-20 font-normal">
-                {tamaralist.map((item) => (
+                {tamaraList.map((item) => (
                   <li className="flex items-center gap-2" key={item.id}>
                     <span>({item.id})</span>
                     <span>{item.para}</span>

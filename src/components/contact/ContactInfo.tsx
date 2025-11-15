@@ -1,8 +1,7 @@
 "use client";
 import { contactDetails } from "@/data/contact";
-
 import Link from "next/link";
-import ContactForm from "./ContactForm";
+import { ContactForm } from "./ContactForm";
 export const ContactInfo = () => {
   return (
     <>
@@ -47,4 +46,3 @@ export const ContactInfo = () => {
   );
 };
 
-export default ContactInfo;

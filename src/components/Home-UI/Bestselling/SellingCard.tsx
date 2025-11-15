@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineShoppingCart } from "react-icons/hi";
@@ -8,10 +7,10 @@ import { FaHeart } from "react-icons/fa";
 import Carticon from "@/components/svgs/carticon";
 import { BestsellingProps } from "@/types/home.type";
 
-const ProductCard: React.FC<{ item: BestsellingProps }> = ({ item }) => {
+export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [hovered, setHovered] = useState(false);
-  const [wishlisted, setWishlisted] = useState(false);
+  const [wishlisted, setWishListed] = useState(false);
 
   // Image auto-rotation on hover
   useEffect(() => {
@@ -30,8 +29,6 @@ const ProductCard: React.FC<{ item: BestsellingProps }> = ({ item }) => {
   return (
     <div
       className="group bg-white shadow-sm hover:shadow-md transition-all relative overflow-hidden"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       {/* Image Container */}
       <div className="relative w-full h-[300px] sm:h-[376px] overflow-hidden cursor-pointer">
@@ -39,13 +36,15 @@ const ProductCard: React.FC<{ item: BestsellingProps }> = ({ item }) => {
           src={item.images[currentImage]}
           alt={item.title}
           fill
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
           className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
         />
 
         {/* Wishlist & Cart Icons */}
         <div className="flex flex-col gap-2 absolute right-2 top-2 sm:right-3 sm:top-3">
           <button
-            onClick={() => setWishlisted(!wishlisted)}
+            onClick={() => setWishListed(!wishlisted)}
             className="h-9 w-9 sm:h-10 sm:w-10 bg-white/80 flex justify-center items-center rounded-md shadow hover:bg-white"
           >
             <FaHeart

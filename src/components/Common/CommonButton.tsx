@@ -1,15 +1,14 @@
 "use client";
 import { LinkButtonProps } from "@/types/home.type";
 import Link from "next/link";
-import React from "react";
 
-const Button: React.FC<LinkButtonProps> = ({
+export const Button = ({
   href,
   text,
   className = "",
   type = "button",
   onClick,
-}) => {
+}:LinkButtonProps) => {
   if (href) {
     return (
       <Link href={href} className={`text-center p-2 rounded-md ${className}`}>
@@ -24,4 +23,3 @@ const Button: React.FC<LinkButtonProps> = ({
   );
 };
 
-export default Button;

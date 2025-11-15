@@ -1,7 +1,7 @@
-import { categories } from "@/data/shopbycategory";
-import Image from "next/image";
 
-const FurnitureCategorySection: React.FC = () => {
+import { categories } from "@/data";
+import Image from "next/image";
+export const FurnitureCategorySection = () => {
   return (
     <section className="py-12 px-4 lg:px-16 bg-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -33,4 +33,4 @@ const FurnitureCategorySection: React.FC = () => {
   );
 };
 
-export default FurnitureCategorySection;
+

@@ -4,32 +4,32 @@ export const categories: ShopbyCategoryProps[] = [
   {
     title: "Sofas",
     imgSrc: "/assets/images/home/shop/1.webp",
-    link: "/collections/sofas",
+    link: "/sofas",
   },
   {
     title: "Chairs",
     imgSrc: "/assets/images/home/shop/2.webp",
-    link: "/collections/chairs",
+    link: "/chairs",
   },
   {
     title: "Tables",
    imgSrc: "/assets/images/home/shop/3.webp",
-    link: "/collections/tables",
+    link: "/tables",
   },
   {
     title: "Beds",
     imgSrc: "/assets/images/home/shop/4.webp",
-    link: "/collections/beds",
+    link: "/beds",
   },
  {
     title: "Sofas",
     imgSrc: "/assets/images/home/shop/1.webp",
-    link: "/collections/sofas",
+    link: "/sofas",
   },
   {
     title: "Chairs",
     imgSrc: "/assets/images/home/shop/2.webp",
-    link: "/collections/chairs",
+    link: "/chairs",
   },
 
 ];

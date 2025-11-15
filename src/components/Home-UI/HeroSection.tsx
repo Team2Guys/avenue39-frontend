@@ -5,7 +5,7 @@ import Link from "next/link";
 import { HeroSectionProps } from "@/types/home.type";
 import DropDown from "../svgs/dropdown";
 
-export const HeroSection: React.FC<HeroSectionProps> = ({
+export const HeroSection= ({
   backgroundImage,
   title,
   subtitle,
@@ -15,9 +15,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   className = "",
   interior = false,
   hidebutton = false,
-  sofa = false,
   id,
-}) => {
+}: HeroSectionProps) => {
   const handleScroll = () => {
     const section = document.getElementById("target-section");
     if (section) {
@@ -39,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       />
 
       <div
-        className={`relative z-20 text-center  h-auto sm:w-[70%] lg:h-[220px] xl:h-[240px] ${interior ? "flex flex-col justify-center items-center space-y-1 w-[300px] cxxs:w-[343px] sm:w-lg md:w-2xl xl:w-4xl xl:h-[277px] " : "lg:w-[477px] xl:w-[600px] "} p-3`}
+        className={`relative z-20 text-center  h-auto sm:w-[70%] lg:h-[220px] xl:h-60 ${interior ? "flex flex-col justify-center items-center space-y-1 w-[300px] cxxs:w-[343px] sm:w-lg md:w-2xl xl:w-4xl xl:h-[277px] " : "lg:w-[477px] xl:w-[600px] "} p-3`}
       >
         <div
           className={`absolute inset-0 ${interior ? "bg-white/70 backdrop-blur-[1px] border border-white/70" : "bg-black/60"} -z-10`}
@@ -62,7 +61,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           {highlightText && (
             <p
-              className={`text-[20px] ${interior ? "font-alethia xl:text-[32px] font-extralight text-black" : sofa ? "font-signatie italic text-[24px] md:text-[34px] font-extralight mb-2" : ""}`}
+              className={`font-extralight ${interior ? "font-alethia text-[20px] xl:text-[32px]  text-black" : "font-signatie italic text-[24px] md:text-[34px] mb-2"}`}
             >
               {highlightText}
             </p>
@@ -71,7 +70,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {buttonLabel && buttonLink && (
             <Link
               href={buttonLink}
-              className={`inline-block ${sofa ? "mt-0" : "mt-6"} border border-white w-full sm:w-[50%] py-2 uppercase text-[16px] tracking-[0.25em] hover:bg-white hover:text-black transition-all`}
+              className={`inline-block ${interior? "mt-6" : "mt-0"} border border-white w-full sm:w-[50%] py-2 uppercase text-[16px] tracking-[0.25em] hover:bg-white hover:text-black transition-all`}
             >
               {buttonLabel}
             </Link>

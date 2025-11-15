@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { MenuItems } from "@/data/home";
+import { menuItems } from "@/data/home";
 
 export const MobileMenus = ({ onClose }: { onClose: () => void }) => {
   return (
     <nav className="flex flex-col gap-1">
-      {MenuItems.map((item, index) => (
+      {menuItems.map((item, index) => (
         <div key={index} className="border-b border-gray-200">
           <Link
             onClick={onClose}

@@ -6,7 +6,6 @@ export * from "./home-ui"
 export * from "./layout"
 export * from "./product"
 export * from "./thankyou"
-export * from "./ui"
 export * from "./svgs"
 
 

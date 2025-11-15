@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { ShowroomBannerProps } from "@/types/home.type";
 import { FiPlay } from "react-icons/fi";
-
-export const ShowroomBanner: React.FC<ShowroomBannerProps> = ({
+export const ShowroomBanner = ({
   videoSrc,
   poster,
   height,
   title,
-}) => {
+}:ShowroomBannerProps) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -53,7 +52,7 @@ export const ShowroomBanner: React.FC<ShowroomBannerProps> = ({
 
       {/* Title overlay */}
       <div className="absolute inset-0 flex flex-col items-center pt-6 lg:pt-20 text-white pointer-events-none">
-        <h2 className="text-lg sm:text-4xl text-center xl:text-[64px] font-light w-fit lg:leading-[120%] font-alethiaLight uppercase border sm:border-0 border-white bg-transparent backdrop-blur-sm sm:backdrop-blur-none p-2" dangerouslySetInnerHTML={{ __html: title || ''}}>
+        <h2 className="text-lg sm:text-4xl text-center xl:text-[64px] font-light w-fit lg:leading-[120%] font-alethiaLight uppercase border sm:border-0 border-white transparent backdrop-blur-sm sm:backdrop-blur-none p-2 text-black bg-white/70" dangerouslySetInnerHTML={{ __html: title || ''}}>
         </h2>
       </div>
 

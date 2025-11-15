@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import PaymentMethod from "../ui/payment";
-
 import { MdOutlineInfo } from "react-icons/md";
 import Dollar from "../svgs/dollar";
 import QuantitySelector from "./QuantitySelector";
@@ -9,6 +7,7 @@ import { useState } from "react";
 import ProductSlider from "./ProductSlider";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/Accordion";
 import Thumbnail from "./Thumbnail";
+import PaymentMethod from "../ui/PaymentMethod";
 
 
 
@@ -180,7 +179,7 @@ const ProductDetail = () => {
           </p>
           <p className="flex items-start gap-4 text-xs font-bold font-alethia">
             Colors
-            <div className="flex items-center gap-4">
+            <p className="flex items-center gap-4">
               <span
                 className="rounded-full w-[21px] h-[21px] border border-black"
                 style={{ background: "#D9D9D9" }}
@@ -193,7 +192,7 @@ const ProductDetail = () => {
                 className="rounded-full w-[21px] h-[21px]"
                 style={{ background: "#765333" }}
               ></span>
-            </div>
+            </p>
           </p>
           <p className="flex flex-col gap-4 text-xs font-bold font-alethia">
             Quantity

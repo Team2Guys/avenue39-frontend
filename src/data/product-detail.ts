@@ -3,31 +3,31 @@ import viseCard from "./../../public/assets/images/payment-icons/visacard-logo.p
 import gPayCard from "./../../public/assets/images/payment-icons/googlepay-logo.png";
 import { ITabbyList, ITabbyPayList, ITamaraList } from "@/types/product";
 
-export const tabbyfeature: ITabbyList[] = [
+export const tabbyFeature: ITabbyList[] = [
   { id: 1, para: "No interest. No fees." },
   { id: 2, para: "Trusted by 4,5m+ customers." },
   { id: 3, para: "Shariah-compliant." },
 ];
 
-export const tabbyhowitwork: ITabbyList[] = [
+export const tabbyhowitWork: ITabbyList[] = [
   { id: 1, para: "Choose Tabby at checkout" },
   { id: 2, para: "Enter your information and add your debit or credit card." },
   { id: 3, para: "Your first payment is taken when the order is made." },
   { id: 4, para: "We will send you a reminder when your next payment is due" },
 ];
 
-export const tabbypayicon: ITabbyPayList[] = [
+export const tabbyPayicon: ITabbyPayList[] = [
   { id: 1, imageUrl: masterCard },
   { id: 2, imageUrl: viseCard },
   { id: 3, imageUrl: gPayCard },
 ];
 
-export const tamarawhy: ITamaraList[] = [
+export const tamaraWhy: ITamaraList[] = [
   { id: 1, para: "Sharia-compliant" },
   { id: 2, para: "No late fees" },
   { id: 3, para: "Quick and easy" },
 ];
-export const tamaralist: ITamaraList[] = [
+export const tamaraList: ITamaraList[] = [
   {
     id: 1,
     para: "Payment options availability may vary based on your order value and Tamara record.",
@@ -41,7 +41,7 @@ export const tamaralist: ITamaraList[] = [
   },
 ];
 
-export const tamarafeature: ITamaraList[] = [
+export const tamaraFeature: ITamaraList[] = [
   {
     id: 1,
     title: "Split in 4",

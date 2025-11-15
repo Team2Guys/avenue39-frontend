@@ -1,13 +1,10 @@
 "use client";
 import Link from "next/link";
-
-import { cartItems, wishlistItems } from "@/data/Cart";
 import DropdownPanel from "./DropDownPanel";
 import Hearticon from "@/components/svgs/hearticon";
 import Carticon from "@/components/svgs/carticon";
 import Account from "@/components/svgs/account";
-
-
+import { cartItems, wishlistItems } from "@/data";
 const UserIcons = ({ className }: { className?: string }) => {
   return (
     <div className={`flex items-center ${className}`}>

@@ -1,11 +1,8 @@
 "use client";
-
-import React from "react";
 import { useFormik } from "formik";
-import { ContactFormProps } from "@/types/home.type";
 import { contactInitialValues, contactValidationSchema } from "@/data/form";
 
-const ContactForm: React.FC<ContactFormProps> = () => {
+export const ContactForm = () => {
   const formik = useFormik({
     initialValues: contactInitialValues,
     validationSchema: contactValidationSchema,
@@ -116,4 +113,3 @@ const ContactForm: React.FC<ContactFormProps> = () => {
   );
 };
 
-export default ContactForm;

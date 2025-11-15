@@ -3,8 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { RelatedProductsProps } from "@/types/home.type";
 import Dollar from "../svgs/dollar";
-import Button from "./CommonButton";
+
 import CustomSwiper from "../ui/CustomSwiper";
+import { Button } from "./CommonButton";
 const RelatedProducts: React.FC<RelatedProductsProps> = ({
   title = "Related Product",
   subtitle = "Indulge in the height of luxury with our best-selling furniture where unparalleled comfort meets timeless sophistication.",

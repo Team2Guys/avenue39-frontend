@@ -5,8 +5,7 @@ import CustomSwiper from "../ui/CustomSwiper";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { bestSelling } from "@/data/bestselling";
 import ProductCard from "./Bestselling/SellingCard";
-
-export const BestSelling: React.FC = () => {
+export const BestSelling = () => {
   return (
     <section className="bg-[#f2f0ed] py-5 lg:py-12 pl-2 sm:px-2">
       <div>
@@ -27,4 +26,3 @@ export const BestSelling: React.FC = () => {
   );
 };
 
-export default BestSelling;

@@ -3,12 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import Bar from "../../svgs/bar";
-import UserIcons from "./Usericon";
 import { MobileMenus } from "./MobileMenu";
 import { Drawer } from "@/components/ui";
 import SearchBar from "./Search";
+import UserIcons from "./UserIcon";
 
-const Subbar = () => {
+const SubBar = () => {
   const [open, setOpen] = useState(false);
   const onClose = () => setOpen(false);
   return (
@@ -44,4 +44,4 @@ const Subbar = () => {
   );
 };
 
-export default Subbar;
+export default SubBar;

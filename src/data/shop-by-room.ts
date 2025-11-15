@@ -1,5 +1,5 @@
 
-export const Byroom = [
+export const byRoom = [
   {
     title: "Living Room",
     imgSrc: "/assets/images/home/room/1.webp",

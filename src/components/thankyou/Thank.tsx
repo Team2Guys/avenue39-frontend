@@ -1,4 +1,5 @@
-import Button from "../common/CommonButton";
+
+import { Button } from "../common";
 import Thankyou from "../svgs/thankyou";
 
 

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { BreadcrumbProps } from "@/types/home.type";
-const Breadcrumb = ({
+const BreadCrumb = ({
   title = "",
   slug = "",
   subcategory = "",
@@ -72,4 +72,4 @@ const Breadcrumb = ({
   );
 };
 
-export default Breadcrumb;
+export default BreadCrumb;

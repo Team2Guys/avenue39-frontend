@@ -1,10 +1,10 @@
-export const Links = [
+export const links = [
   { label: "Delivery", href: "/delivery" },
   { label: "Shipping", href: "/shipping" },
   { label: "Warranty", href: "/warranty" },
 ];
 
-export const MenuItems = [
+export const menuItems = [
   {
     name: "Dining",
     link: "/dining",
@@ -15,7 +15,7 @@ export const MenuItems = [
   },
   {
     name: "Bedroom",
-    link: "/bedroomg",
+    link: "/bedroom",
   },
   {
     name: "Home",
@@ -23,7 +23,7 @@ export const MenuItems = [
   },
   {
     name: "Chairs",
-    link: "/chairss",
+    link: "/chairs",
   },
   {
     name: "Sofas",
@@ -43,11 +43,11 @@ export const MenuItems = [
   },
   {
     name: "Accessories",
-    link: "/accessorie",
+    link: "/accessories",
   },
   {
     name: "New Arrivals",
-    link: "/new-arrivalss",
+    link: "/new-arrivals",
   },
   {
     name: "Clearance",

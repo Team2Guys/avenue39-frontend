@@ -1,7 +1,7 @@
 import { BannerSectionProps } from "@/types/home.type";
 import Image from "next/image";
 import React from "react";
-export const Banner: React.FC<BannerSectionProps> = ({
+export const Banner = ({
   imageSrc,
   title,
   height,
@@ -9,7 +9,7 @@ export const Banner: React.FC<BannerSectionProps> = ({
   overlay,
   overlayColor,
   overlayOpacity,
-}) => {
+}:BannerSectionProps) => {
   return (
     <section
       className="relative w-full flex justify-center items-center overflow-hidden"

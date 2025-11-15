@@ -17,7 +17,7 @@ export interface Product {
   link?: string;
   icon?: string;
 }
-export const HomeProductCard: React.FC<ProductCardProps> = ({ item }) => {
+export const HomeProductCard= ({ item }:ProductCardProps) => {
   const IconComponent = item.icon
     ? (FaIcons as Record<string, React.ElementType>)[item.icon]
     : null;

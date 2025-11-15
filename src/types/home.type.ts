@@ -9,7 +9,6 @@ export interface HeroSectionProps {
   className?: string;
   interior?: boolean;
   hidebutton?: boolean;
-  sofa?: boolean;
   id?: string;
 }
 
