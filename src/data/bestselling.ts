@@ -8,7 +8,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Sapori-Dining",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
     images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -21,7 +21,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Sapori-Dining",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
      images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -34,7 +34,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Sapori-Dining",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
      images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -47,7 +47,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Sapori-Dining",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
     images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -60,7 +60,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Siberian",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
     images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -73,7 +73,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Siberian",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
      images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -86,7 +86,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Siberian",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+   discount_price: "Dhs. 3,400",
      images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
@@ -99,7 +99,7 @@ export const bestSelling: BestsellingProps[] = [
     link: "/Siberian",
     category: "Our Full Collection",
     price: "Dhs. 2,900",
-    discountprice: "Dhs. 3,400",
+    discount_price: "Dhs. 3,400",
      images: [
       "/assets/images/home/1.webp",
       "/assets/images/home/2.webp",
