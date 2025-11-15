@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface CarticonProps {
+interface CartIconProps {
   className?: string;
 }
 
-const Carticon: React.FC<CarticonProps> = ({ className }) => {
+const CartIcon: React.FC<CartIconProps> = ({ className }) => {
   return (
     <svg
       width="24"
@@ -22,4 +22,4 @@ const Carticon: React.FC<CarticonProps> = ({ className }) => {
   );
 };
 
-export default Carticon;
+export default CartIcon;

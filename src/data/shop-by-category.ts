@@ -1,6 +1,6 @@
-import { ShopbyCategoryProps } from "@/types/home.type";
+import { ShopCategoryProps } from "@/types/home.type";
 
-export const categories: ShopbyCategoryProps[] = [
+export const categories: ShopCategoryProps[] = [
   {
     title: "Sofas",
     imgSrc: "/assets/images/home/shop/1.webp",

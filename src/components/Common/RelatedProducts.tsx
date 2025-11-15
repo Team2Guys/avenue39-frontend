@@ -45,7 +45,7 @@ const RelatedProducts: React.FC<RelatedProductsProps> = ({
                   </span>
                 </div>
                 <div className="flex gap-2 mt-2">
-                  {item.colorimages?.map((color, i) => (
+                  {item.color_images?.map((color, i) => (
                     <div key={i} className="w-3 h-3 rounded-full overflow-hidden">
                       <Image
                         src={color || "/placeholder.png"}

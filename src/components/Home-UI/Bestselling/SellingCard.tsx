@@ -4,13 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa";
-import Carticon from "@/components/svgs/carticon";
+
 import { BestsellingProps } from "@/types/home.type";
+import CartIcon from "@/components/svgs/carticon";
 
 export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [hovered, setHovered] = useState(false);
-  const [wishlisted, setWishListed] = useState(false);
+  const [wishListed, setWishListed] = useState(false);
 
   // Image auto-rotation on hover
   useEffect(() => {
@@ -44,17 +45,17 @@ export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
         {/* Wishlist & Cart Icons */}
         <div className="flex flex-col gap-2 absolute right-2 top-2 sm:right-3 sm:top-3">
           <button
-            onClick={() => setWishListed(!wishlisted)}
+            onClick={() => setWishListed(!wishListed)}
             className="h-9 w-9 sm:h-10 sm:w-10 bg-white/80 flex justify-center items-center rounded-md shadow hover:bg-white"
           >
             <FaHeart
               className={`text-[18px] sm:text-[20px] transition-colors ${
-                wishlisted ? "text-transparent stroke-[#AA7F4F] stroke-35" : "text-[#AA7F4F]"
+                wishListed ? "text-transparent stroke-[#AA7F4F] stroke-35" : "text-[#AA7F4F]"
               }`}
             />
           </button>
           <div className="h-9 w-9 sm:h-10 sm:w-10 bg-white/80 flex justify-center items-center rounded-md shadow hover:bg-white">
-            <Carticon className="text-[#AA7F4F]" />
+            <CartIcon className="text-[#AA7F4F]" />
           </div>
         </div>
 
@@ -88,13 +89,13 @@ export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
           {item.category}
         </Link>
 
-        <div className="relative mt-3 h-[36px] sm:h-[38px]">
+        <div className="relative mt-3 h-9 sm:h-[38px]">
           <div className="flex flex-row items-start gap-3">
             <p className="text-[14px] sm:text-[16px] font-alethia font-bold text-gray-600 line-through decoration-gray-600">
               {item.price}
             </p>
             <p className="text-[14px] sm:text-[16px] font-alethia font-bold text-black">
-              {item.discountprice}
+              {item.discount_price}
             </p>
           </div>
 

@@ -14,7 +14,7 @@ export const HeroSection= ({
   buttonLink,
   className = "",
   interior = false,
-  hidebutton = false,
+  hide_button = false,
   id,
 }: HeroSectionProps) => {
   const handleScroll = () => {
@@ -48,7 +48,7 @@ export const HeroSection= ({
 
         <div>
           <h2
-            className={`xl:text-[44px] tracking-wide ${interior ? "font-normal text-[24px] text-black mb-2" : "cx:text-[24px] cxxs:text-[32px] uppercase font-extralight"} font-alethia`}
+            className={`xl:text-[44px] tracking-wide ${interior ? "font-normal text-[24px] text-black mb-2" : "cx:text-[24px] cxxs:text-[32px] uppercase font-extralight"} font-alethiaLight`}
           >
             {title}
           </h2>
@@ -79,7 +79,7 @@ export const HeroSection= ({
       </div>
 
       <div
-        className={`${hidebutton ? "hidden" : ""} cursor-pointer absolute bottom-5 lg:bottom-28 z-20`}
+        className={`${hide_button ? "hidden" : ""} cursor-pointer absolute bottom-5 lg:bottom-28 z-20`}
         onClick={handleScroll}
       >
         <DropDown />

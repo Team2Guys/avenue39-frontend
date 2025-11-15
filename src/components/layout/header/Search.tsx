@@ -9,7 +9,7 @@ const SearchBar = ({ className }: { className?: string }) => {
 
   return (
     <div className={`${className}`}>
-      <div className="hidden md:flex border border-black gap-2 p-[6px] items-center w-full">
+      <div className="hidden md:flex border border-black gap-2 p-1.5 items-center w-full">
         <SearchIcon />
         <input className="outline-none w-full text-sm" type="text" />
       </div>

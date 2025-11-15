@@ -1,4 +1,4 @@
-// Home/Herosection
+// Home/Hero-section
 export interface HeroSectionProps {
   backgroundImage: string;
   title: string;
@@ -8,7 +8,7 @@ export interface HeroSectionProps {
   buttonLink?: string;
   className?: string;
   interior?: boolean;
-  hidebutton?: boolean;
+  hide_button?: boolean;
   id?: string;
 }
 
@@ -26,7 +26,7 @@ export interface BestsellingProps {
   link: string;
   category: string;
   price: string;
-  discountprice: string;
+  discount_price: string;
   images: string[];
 }
 
@@ -43,7 +43,7 @@ export interface HotSpot {
   variations?: string[];
 }
 
-export interface ProductHotspotProps {
+export interface ProductSpotProps {
   imageSrc: string;
   hotSpots: HotSpot[];
 }
@@ -97,7 +97,7 @@ export interface BreadcrumbProps {
   slug?: string;
   subcategory?: string;
   altText?: string;
-  isImagetext?: boolean;
+  isImageText?: boolean;
   imageClass?: string;
   showTitle?: boolean;
   careersName?: string;
@@ -112,7 +112,7 @@ export interface LinkButtonProps {
   onClick?: () => void;
 }
 
-// ordersummary
+// order-summary
 export interface OrderSummaryProps {
   items: OrderItem[];
 }
@@ -131,7 +131,7 @@ export interface ProductItem {
   price: string;
   regularPrice: string;
   image: string;
-  colorimages?: string[];
+  color_images?: string[];
 }
 
 export interface RelatedProductsProps {
@@ -147,11 +147,11 @@ export interface MenuItem {
 export interface SubmenuItem {
   name: string;
   link: string;
-  mobileimage?: string;
-  desktopimage?: string;
+  mobile_image?: string;
+  desktop_image?: string;
 }
 
-// Dropdownmodel
+// Drop-down-model
 export interface DropdownPanelProps {
   icon: React.ReactNode;
   title: string;
@@ -186,7 +186,7 @@ export interface HeroSplitSectionProps {
   className?: string;
 }
 
-// searchprops
+// search-props
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -204,7 +204,7 @@ export interface ExtendedModalProps extends ModalProps {
   height?: number | string;
 }
 
-export interface ShopbyCategoryProps {
+export interface ShopCategoryProps {
   title: string;
   imgSrc: string;
   link: string;

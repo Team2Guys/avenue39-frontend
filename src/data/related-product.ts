@@ -5,7 +5,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r1.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r2.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r3.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r4.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 1,
@@ -37,7 +37,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r1.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r2.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r3.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
   {
     id: 4,
@@ -61,6 +61,6 @@ export const products = [
     price: "3,400",
     regularPrice: "2,400",
     image: "/assets/images/bin/r4.webp",
-    colorimages: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
+    color_images: ["/assets/images/bin/13.jpg", "/assets/images/bin/14.jpg"],
   },
 ];

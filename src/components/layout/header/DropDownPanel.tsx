@@ -66,7 +66,7 @@ const DropdownPanel = ({
       {isOpen && (
         <div
           ref={panelRef}
-          className="fixed lg:absolute right-2 sm:right-5 lg:right-0 top-21 lg:top-6 z-[999] bg-white shadow-lg rounded-lg border border-gray-200 w-[90vw] sm:w-80 p-3"
+          className="fixed lg:absolute right-2 sm:right-5 lg:right-0 top-21 lg:top-6 z-999 bg-white shadow-lg rounded-lg border border-gray-200 w-[90vw] sm:w-80 p-3"
         >
           <div className="flex justify-between items-center mb-3">
             <p className="font-semibold text-base">{title}</p>

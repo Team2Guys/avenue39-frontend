@@ -24,7 +24,7 @@ export default function Home() {
         title="Interiors by Avenue39"
         subtitle="BY NICK & HARRY CONDOS"
         highlightText="IN AMERICAN WHITE OAK & TURKISH TRAVERTINE"
-        hidebutton
+        hide_button
         className="h-[50vh]"
         interior
       />
