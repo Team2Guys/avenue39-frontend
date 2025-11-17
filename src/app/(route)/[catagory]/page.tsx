@@ -4,7 +4,7 @@ const Category = () => {
   return (
     <div>
       <Breadcrumb title="Category" />
-      <CategoryPage />;
+      <CategoryPage />
       <VideoSection
         videoUrl="https://bncvidoes.s3.eu-north-1.amazonaws.com/c1.mp4"
         title="Lorem Ipsum is simply dummy text"

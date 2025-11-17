@@ -195,3 +195,24 @@ body {
   left: auto !important;
   width: fit-content !important;
 }
+
+
+/* Product Card Slider Pagination (same as Best Selling section) */
+.product-swiper .swiper-pagination {
+  bottom: 10px !important;       /* adjust spacing */
+  z-index: 50 !important;
+}
+
+.product-swiper .swiper-pagination-bullet {
+  background: #ffffff !important; /* white dots */
+  opacity: 0.6 !important;
+  width: 6px;
+  height: 6px;
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+  background: #AA7F4F !important; /* your brown theme color */
+  opacity: 1 !important;
+  width: 7px;
+  height: 7px;
+}

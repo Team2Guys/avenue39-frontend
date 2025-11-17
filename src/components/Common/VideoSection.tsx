@@ -23,9 +23,9 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
       setIsPlaying(true);
     }
   };
-
+  
   return (
-    <section className={`w-full flex flex-col md:flex-row h-[234px] mt-5 lg:mt-14 ${height}`}>
+    <section className={`w-full flex flex-col md:flex-row sm:h-[319px] lg:h-[234px] mt-5 lg:mt-14 ${height}`}>
       <div className="relative w-full md:w-1/2">
         <video ref={videoRef} src={videoUrl} className="w-full h-full object-cover" loop muted />
         <button
@@ -42,7 +42,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
         </button>
       </div>
 
-      <div className="w-full md:w-1/2 bg-black text-white flex flex-col justify-center items-center p-8 text-center">
+      <div className="w-full md:w-1/2 bg-black text-white flex flex-col justify-center items-center p-8 text-center h-[157px] sm:h-[319px] lg:h-[234px]">
         <h2 className="text-2xl md:text-3xl font-semibold mb-3">{title}</h2>
         <p className="text-sm md:text-base max-w-md text-gray-300">{description}</p>
       </div>

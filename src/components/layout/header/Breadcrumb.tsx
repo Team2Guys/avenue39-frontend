@@ -8,15 +8,13 @@ const BreadCrumb = ({
   className = "",
   careersName = "",
 }: BreadcrumbProps & { className?: string }) => {
- 
 
   const arrow = "/";
-
   return (
     <div
-      className={`z-20 w-full p-2 bg-white hidden sm:block border-t border-[#E2E2E2] text-[13px]  ${className}`}
+      className={`z-20 w-full p-2 sm:block text-[13px] bg-[#F9F7F4] sm:mt-5  ${className}`}
     >
-      <div className="container mx-auto flex items-center gap-2 sm:gap-4">
+      <div className="container mx-auto flex items-center gap-1 ">
         <Link href="/" className="capitalize text-[#BFBFBF]">
           Home
         </Link>
