@@ -5,11 +5,8 @@ import { usePathname } from "next/navigation";
 import { Down } from "../svgs/down";
 export const CategoryTabs = ({ categories }: Props) => {
   const pathname = usePathname();
-  // Create clean slug from category
   const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, "-").replace(/'/g, "");
-  // Normalize path (remove trailing slash)
   const cleanPath = pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
-
   return (
     <div className="">
      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
@@ -19,7 +16,7 @@ export const CategoryTabs = ({ categories }: Props) => {
     <div className="flex gap-3 min-w-max sm:flex-wrap sm:min-w-0">
       {categories.map((cat) => {
         const slug = slugify(cat);
-        const href = slug === "all" ? "/categories" : `/categories/${slug}`;
+        const href = slug === "all" ? "/" : `/${slug}`;
         const isActive = cleanPath === href;
         return (
           <Link

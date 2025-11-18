@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CategoryTabs } from "./CategoryTabs";
 import { ProductCard } from "./ProductCard";
 
-export const CategoryPage = () => {
+export const CategoryPage = ({categoryName}:{categoryName?:string}) => {
   const categories = [
     "All",
     "Sofas",
@@ -15,7 +15,6 @@ export const CategoryPage = () => {
     "Sofa Beds",
     "Accessories",
   ];
-
   const [selected] = useState("All");
   const [visibleCount, setVisibleCount] = useState(12);
 
@@ -39,7 +38,7 @@ export const CategoryPage = () => {
 
   return (
     <div className="sm:container mx-auto px-3">
-      <div className="text-center font-alethia my-3 sm:my-5 font-medium uppercase text-[20px] lg:text-[36px]">Dinning</div>
+      <div className="text-center font-alethia my-3 sm:my-5 font-medium uppercase text-[20px] lg:text-[36px]">{categoryName}</div>
       {/* Category Tabs */}
       <CategoryTabs categories={categories} />
       {/* Product Grid */}

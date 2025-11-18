@@ -22,8 +22,8 @@ export const productsData: Product[] = [
     dimensions: "(d:130 cm)",
     price: 3400,
     memberPrice: 2400,
-  colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/accent-bedside-table",
+    colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
+    link: "/accent-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -38,7 +38,7 @@ export const productsData: Product[] = [
     price: 3200,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/modern-bedside-table",
+    link: "/modern-bedside-table",
     category: "Coffee Tables",
   },
   {
@@ -53,7 +53,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -68,7 +68,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/athena-coffee-table",
+    link: "/athena-coffee-table",
     category: "Bedside Tables",
   },
   {
@@ -83,7 +83,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/florence-coffee-table",
+    link: "/florence-coffee-table",
     category: "Bedside Tables",
   },
   {
@@ -98,7 +98,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/florence-coffee-table",
+    link: "/florence-coffee-table",
     category: "Bedside Tables",
   },
   {
@@ -113,7 +113,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -128,7 +128,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -143,7 +143,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -158,7 +158,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -173,7 +173,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -188,7 +188,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -203,7 +203,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -218,7 +218,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
     colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
   {
@@ -233,7 +233,7 @@ export const productsData: Product[] = [
     price: 3400,
     memberPrice: 2400,
    colors: ["/assets/images/bin/product-page/red.jpg", "/assets/images/bin/product-page/green.jpg"],
-    link: "/products/tavola-bedside-table",
+    link: "/tavola-bedside-table",
     category: "Bedside Tables",
   },
 ];

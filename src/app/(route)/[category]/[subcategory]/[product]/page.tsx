@@ -5,10 +5,12 @@ import Breadcrumb from "@/components/layout/header/BreadCrumb";
 import ProductDetail from "@/components/product/ProductDetail";
 import { products } from "@/data";
 
-const Product = () => {
+const Product = async ({ params }: { params: Promise<{ category: string; subcategory: string , product: string }> }) => {
+  const {category, subcategory, product} = await params
+  console.log(subcategory,"subcategory",category)
   return (
     <>
-      <Breadcrumb slug="Category" subcategory="subcategory" title="product" />
+      <Breadcrumb slug={category} subcategory={subcategory} title={product} />
       <ProductDetail />
       <RelatedProducts products={products} />;
       <Testimonial />

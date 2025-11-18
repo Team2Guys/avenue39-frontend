@@ -58,38 +58,3 @@ export const menuItems = [
     link: "/sale",
   },
 ];
-
-export const subcategories = [
-   {
-    name: "All",
-    link: "/",
-  },
-  {
-    name: "Sofas",
-    link: "/sofas",
-  },
-   {
-    name: "Armchairs",
-    link: "/armchairs",
-  },
-   {
-    name: "TV Cabinet",
-    link: "/tv-cabinet",
-  },
-   {
-    name: "Side Tables",
-    link: "/side Tables",
-  },
-   {
-    name: "Coffee Table",
-    link: "/coffee-table",
-  },
-   {
-    name: "Sofa Beds",
-    link: "/sofa-beds",
-  },
-   {
-    name: "Accessories",
-    link: "/accessories",
-  },
-]
