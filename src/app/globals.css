@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -55,6 +56,7 @@
   --color-secondary-light: var(--secondary-light);
   --color-breadcrumb: var(--breadcrumb);
   --font-alethia: "AlethiaNext", serif;
+  --font-alethiaLight: "alethiaExtraLight", serif;
   --font-signatie: "Signatie", cursive;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -87,6 +89,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+   /* Custom Breakpoints */
+  --breakpoint-cx: 320px;
+  --breakpoint-cxxs: 375px;
+
 }
 
 body {
@@ -138,8 +144,75 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
+.mainThmbnailSwiper .swiper-pagination-bullet {
+  background: transparent;
+  border: 2px solid #BFBFBF;
+  width: 15px !important;
+  height: 15px !important;
+  opacity: 1 !important;
+}
+.mainThmbnailSwiper .swiper-pagination-bullet-active {
+  border: black;
+  
+}
+
+.mainThmbnailSwiper .swiper-pagination {
+  bottom: 30px !important;
+}
+
+/* Custom scrollbar styling */
+.table-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.table-scrollbar::-webkit-scrollbar-track {
+  background: #D0D0D0;
+  border-radius: 0px;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 0px;
+  border: 0px solid white;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.matchProduct-slider .swiper-pagination {
+  bottom: auto !important;
+  top: 0px !important;
+  right: 0px !important;
+  left: auto !important;
+  width: fit-content !important;
+}
+
+
+/* Product Card Slider Pagination (same as Best Selling section) */
+.product-swiper .swiper-pagination {
+  bottom: 10px !important;       /* adjust spacing */
+  z-index: 50 !important;
+}
+
+.product-swiper .swiper-pagination-bullet {
+  background: #ffffff !important; /* white dots */
+  opacity: 0.6 !important;
+  width: 6px;
+  height: 6px;
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+  background: #AA7F4F !important; /* your brown theme color */
+  opacity: 1 !important;
+  width: 7px;
+  height: 7px;
+}

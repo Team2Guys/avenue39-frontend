@@ -1,17 +1,17 @@
 
-import { HeroBanner, Information, Testimonial } from '@/components/about-us'
-import Breadcrumb from '@/components/common/Breadcrumb'
-import{ HomeVideo } from '@/components/common/HomeVideo'
+import { HeroBanner, HomeVideo, Information, Testimonial } from "@/components";
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
+
 const AboutPage = () => {
   return (
     <>
-    <Breadcrumb title="About Us"/>
+      <Breadcrumb title="About Us" />
       <HeroBanner />
       <Information />
-      <HomeVideo videoSrc='https://bncmain.s3.eu-north-1.amazonaws.com/Motion+Blinds+%26+Curtains+No+Voiceover.mp4' />
+      <HomeVideo videoSrc="https://bncmain.s3.eu-north-1.amazonaws.com/Motion+Blinds+%26+Curtains+No+Voiceover.mp4" />
       <Testimonial />
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

@@ -1,4 +1,4 @@
-// Home/Herosection
+// Home/Hero-section
 export interface HeroSectionProps {
   backgroundImage: string;
   title: string;
@@ -8,9 +8,8 @@ export interface HeroSectionProps {
   buttonLink?: string;
   className?: string;
   interior?: boolean;
-  hidebutton?: boolean;
-  sofa?: boolean;
-  id?:string
+  hide_button?: boolean;
+  id?: string;
 }
 
 export interface Product {
@@ -21,24 +20,14 @@ export interface Product {
   image: string;
   colors: string[];
 }
-
-export interface  AccessoriesBannerProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  buttonText?: string;
-  reverse?: boolean;
-}
-
 export interface BestsellingProps {
   id: number;
   title: string;
-  link: string
+  link: string;
   category: string;
   price: string;
-  image: string;
-  colors: string[];
+  discount_price: string;
+  images: string[];
 }
 
 export interface ProductCardProps {
@@ -54,23 +43,23 @@ export interface HotSpot {
   variations?: string[];
 }
 
-export interface ProductHotspotProps {
+export interface ProductSpotProps {
   imageSrc: string;
   hotSpots: HotSpot[];
 }
 
 export interface ShowroomBannerProps {
-  videoSrc?: string; 
+  videoSrc?: string;
   poster?: string;
-  height?: string; 
+  height?: string;
   title?: string;
 }
 
 //home video props
 export interface HomeVideoProps {
-    videoSrc: string;
-    posterSrc?: string;
-    className?: string;
+  videoSrc: string;
+  posterSrc?: string;
+  className?: string;
 }
 
 // categories
@@ -82,18 +71,18 @@ export interface VideoSectionProps {
   videoUrl: string;
   title: string;
   description: string;
-  height?: string; 
+  height?: string;
 }
 
 // contact-banner props
 export interface BannerSectionProps {
-  imageSrc: string; 
+  imageSrc: string;
   title?: string;
-  height?: string; 
-  textColor?: string; 
-  overlay?: boolean; 
-  overlayColor?: string; 
-  overlayOpacity?: number; 
+  height?: string;
+  textColor?: string;
+  overlay?: boolean;
+  overlayColor?: string;
+  overlayOpacity?: number;
 }
 
 export interface ContactFormProps {
@@ -102,15 +91,121 @@ export interface ContactFormProps {
 }
 
 // breadcrumb
- export interface BreadcrumbProps  {
-    title?: string;
-    image?: string;
-    slug?: string;
-    subcategory?: string;
-    altText?:string
-    isImagetext?: boolean;
-    imageClass?:string
-    showTitle?:boolean
-    careersName?: string;
-    
-  };
+export interface BreadcrumbProps {
+  title?: string;
+  image?: string;
+  slug?: string;
+  subcategory?: string;
+  altText?: string;
+  isImageText?: boolean;
+  imageClass?: string;
+  showTitle?: boolean;
+  careersName?: string;
+}
+
+// button
+export interface LinkButtonProps {
+  href?: string;
+  text: string;
+  className?: string;
+  type?: "button" | "submit" | "reset";
+  onClick?: () => void;
+}
+
+// order-summary
+export interface OrderSummaryProps {
+  items: OrderItem[];
+}
+export interface OrderItem {
+  id: number;
+  name: string;
+  size: string;
+  price: number;
+  image: string;
+}
+
+// Related products
+export interface ProductItem {
+  id: number;
+  title: string;
+  price: string;
+  regularPrice: string;
+  image: string;
+  color_images?: string[];
+}
+
+export interface RelatedProductsProps {
+  title?: string;
+  subtitle?: string;
+  products: ProductItem[];
+}
+
+export interface MenuItem {
+  name: string;
+  link?: string;
+}
+export interface SubmenuItem {
+  name: string;
+  link: string;
+  mobile_image?: string;
+  desktop_image?: string;
+}
+
+// Drop-down-model
+export interface DropdownPanelProps {
+  icon: React.ReactNode;
+  title: string;
+  badgeCount?: number;
+  items: {
+    name: string;
+    image: string;
+    price?: string;
+    requiredBoxes?: number;
+  }[];
+  viewLink?: string;
+  emptyMessage?: string;
+}
+
+export interface DrawerProps {
+  title: React.ReactNode;
+  content: React.ReactNode;
+  open: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+  width?: number;
+  className?: string;
+}
+
+export interface HeroSplitSectionProps {
+  title: string;
+  subtitle?: string;
+  buttonLabel: string;
+  buttonLink: string;
+  imageSrc: string;
+  reverse?: boolean;
+  className?: string;
+}
+
+// search-props
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+  className?: string;
+  paymentModal?: boolean;
+}
+
+export interface ExtendedModalProps extends ModalProps {
+  title?: string;
+  open?: boolean;
+  onOk?: () => void;
+  onCancel?: () => void;
+  width?: number | string;
+  height?: number | string;
+}
+
+export interface ShopCategoryProps {
+  title: string;
+  imgSrc: string;
+  link: string;
+}

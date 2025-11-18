@@ -1,0 +1,78 @@
+"use client";
+import { productsData } from "@/data";
+import { useState } from "react";
+import { CategoryTabs } from "./CategoryTabs";
+import { ProductCard } from "./ProductCard";
+
+export const CategoryPage = ({categoryName}:{categoryName?:string}) => {
+  const categories = [
+    "All",
+    "Sofas",
+    "Armchairs",
+    "TV Cabinet",
+    "Side Tables",
+    "Coffee Table",
+    "Sofa Beds",
+    "Accessories",
+  ];
+  const [selected] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(12);
+
+  // Filter by selected category
+  const filteredProducts =
+    selected === "All" ? productsData : productsData.filter((p) => p.category === selected);
+
+  // Slice visible products
+  const visibleProducts = filteredProducts.slice(0, visibleCount);
+
+  // Show more handler
+  const handleViewMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
+
+  // Show less handler
+  const handleShowLess = () => {
+    setVisibleCount(12);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  return (
+    <div className="sm:container mx-auto px-3">
+      <div className="text-center font-alethia my-3 sm:my-5 font-medium uppercase text-[20px] lg:text-[36px]">{categoryName}</div>
+      {/* Category Tabs */}
+      <CategoryTabs categories={categories} />
+      {/* Product Grid */}
+      <div className="grid grid-cols-2 lg:grid-cols-3 mt-6 gap-2 lg:gap-5">
+        {visibleProducts.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+
+      {/* Buttons */}
+      <div className="flex justify-center gap-4 my-5 md:mt-14">
+        {/* Show More */}
+        {visibleCount < filteredProducts.length && (
+          <button
+            onClick={handleViewMore}
+            className="px-6 py-3 bg-black text-white text-[16px] xl:w-1/6 font-alethia transition-all duration-200 cursor-pointer hover:bg-black/85"
+          >
+           View More
+          </button>
+        )}
+
+        {/* Show Less */}
+        {visibleCount > 12 && (
+          <button
+            onClick={handleShowLess}
+            className="px-6 py-3 bg-black text-white text-[16px] xl:w-1/8 font-alethia transition-all duration-200 cursor-pointer hover:bg-black/85"
+          >
+           View Less
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
+
+
