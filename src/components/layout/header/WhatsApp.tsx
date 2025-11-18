@@ -12,7 +12,7 @@ export const WhatsApp = () => {
          onClick={(e) => {
               e.stopPropagation();
               e.preventDefault();
-              window.open("https://api.whatsapp.com/send?phone=971501945268", "_blank")
+              window.open("/avenue39.com/cdn/shop/t/15/assets/whatsapp.svg?v=63144138752295136521756806665", "_blank")
             }}
       />
     </div>

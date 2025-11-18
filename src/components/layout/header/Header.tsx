@@ -1,7 +1,8 @@
-import BottomBar from "./BottomBar";
-import NavBar from "./NavBar";
-import SubBar from "./SubBar";
-import { TopBar } from "./TopBar";
+
+import BottomBar from "./Bottombar";
+import NavBar from "./Navbar";
+import SubBar from "./Subbar";
+import { TopBar } from "./Topbar";
 
 export const Header = () => {
   return (

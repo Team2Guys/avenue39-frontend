@@ -1,5 +1,5 @@
 import { Banner, ContactInfo, VideoSection } from "@/components";
-import Breadcrumb from "@/components/layout/header/BreadCrumb";
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
 const ContactUs = () => {
   return (
     <>

@@ -6,8 +6,8 @@ import QuantitySelector from "./QuantitySelector";
 import { useState } from "react";
 import ProductSlider from "./ProductSlider";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/Accordion";
-import Thumbnail from "./Thumbnail";
 import PaymentMethod from "../ui/PaymentMethod";
+import Thumbnail from "./thumbnail";
 
 
 

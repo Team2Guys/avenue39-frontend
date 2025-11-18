@@ -6,7 +6,7 @@ import Bar from "../../svgs/bar";
 import { MobileMenus } from "./MobileMenu";
 import { Drawer } from "@/components/ui";
 import SearchBar from "./Search";
-import UserIcons from "./UserIcon";
+import UserIcons from "./Usericon";
 
 const SubBar = () => {
   const [open, setOpen] = useState(false);

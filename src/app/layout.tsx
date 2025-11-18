@@ -2,9 +2,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {  Header } from "@/components/common";
+
 import Footer from "@/components/layout/footer/Footer";
 import { WhatsApp } from "@/components/layout/header/WhatsApp";
+import { Header } from "@/components";
 
 const alethiaNext = localFont({
   src: "../../public/assets/font/alethianext-light.otf",

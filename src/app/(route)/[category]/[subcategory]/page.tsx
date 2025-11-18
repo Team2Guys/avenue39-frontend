@@ -1,5 +1,5 @@
 import { CategoryPage, VideoSection } from "@/components";
-import Breadcrumb from "@/components/layout/header/BreadCrumb";
+import Breadcrumb from "@/components/layout/header/Breadcrumb";
 
 const SubCategory = async ({ params }: { params: Promise<{ category: string; subcategory: string }> }) => {
   const {category, subcategory} = await params

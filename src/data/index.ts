@@ -1,4 +1,4 @@
-export * from "./cart"
+export * from "./Cart"
 export * from "./about"
 export * from "./bestselling"
 export * from "./contact"
