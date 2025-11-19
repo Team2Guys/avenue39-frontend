@@ -1,6 +1,6 @@
 "use client"
 import BottomBar from "./BottomBar";
-import NavBar from "./Navbar";
+import NavBar from "./NavBar";
 import SubBar from "./SubBar";
 import { TopBar } from "./TopBar";
 

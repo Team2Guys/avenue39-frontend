@@ -1,5 +1,5 @@
 import { CategoryPage, VideoSection } from "@/components";
-import Breadcrumb from "@/components/layout/header/Breadcrumb";
+import Breadcrumb from "@/components/layout/header/BreadCrumb";
 
 const Category = async  ({ params }: { params: { category: string } }) => {
   const { category } = await params;
