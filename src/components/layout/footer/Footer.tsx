@@ -1,5 +1,4 @@
 "use client";
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui";
 import { footerLinks } from "@/data/footer";
 import Image from "next/image";

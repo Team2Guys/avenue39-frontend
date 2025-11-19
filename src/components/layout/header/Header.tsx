@@ -1,8 +1,8 @@
-
-import BottomBar from "./Bottombar";
+"use client"
+import BottomBar from "./BottomBar";
 import NavBar from "./Navbar";
-import SubBar from "./Subbar";
-import { TopBar } from "./Topbar";
+import SubBar from "./SubBar";
+import { TopBar } from "./TopBar";
 
 export const Header = () => {
   return (

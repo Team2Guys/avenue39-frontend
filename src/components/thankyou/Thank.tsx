@@ -2,7 +2,6 @@
 import { Button } from "../common";
 import Thankyou from "../svgs/thankyou";
 
-
 export const Thank = () => {
   return (
     <div className="flex flex-col justify-center items-center text-center mt-10 space-y-4">

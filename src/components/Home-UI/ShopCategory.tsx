@@ -75,7 +75,7 @@ export const ShopByCategory = ({
                 className="object-cover w-full h-[337px]"
               />
               <div className="absolute inset-0 bg-black/30 flex items-end justify-start p-4">
-                <h3 className="text-white font-alethia text-[20px] lg:text-[36px] font-light">{item.title}</h3>
+                <h3 className="text-white font-alethia text-[20px] xl:text-[36px] font-light">{item.title}</h3>
               </div>
             </Link>
           ))}

@@ -4,10 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa";
-
 import { BestsellingProps } from "@/types/home.type";
-import CartIcon from "@/components/svgs/carticon";
-
 export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [hovered, setHovered] = useState(false);
@@ -43,7 +40,7 @@ export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
         />
 
         {/* Wishlist & Cart Icons */}
-        <div className="flex flex-col gap-2 absolute right-2 top-2 sm:right-3 sm:top-3">
+        <div className="flex flex-col absolute right-2 top-2 sm:right-3 sm:top-3">
           <button
             onClick={() => setWishListed(!wishListed)}
             className="h-9 w-9 sm:h-10 sm:w-10 bg-white/80 flex justify-center items-center rounded-md shadow hover:bg-white"
@@ -54,9 +51,6 @@ export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
               }`}
             />
           </button>
-          <div className="h-9 w-9 sm:h-10 sm:w-10 bg-white/80 flex justify-center items-center rounded-md shadow hover:bg-white">
-            <CartIcon className="text-[#AA7F4F]" />
-          </div>
         </div>
 
         {/* Pagination Dots */}
@@ -102,7 +96,7 @@ export const ProductCard= ({ item }:{ item: BestsellingProps }) => {
           {/* Add to Cart Button */}
           <button className="cursor-pointer absolute inset-0 w-full bg-black text-white flex items-center justify-center gap-2 py-2 text-xs sm:text-sm transition-opacity duration-300 opacity-100 sm:opacity-0 sm:group-hover:opacity-100">
             <HiOutlineShoppingCart className="text-base sm:text-lg" />
-            Add to cart – {item.price}
+           Shop Now - {item.price}
           </button>
         </div>
       </div>
